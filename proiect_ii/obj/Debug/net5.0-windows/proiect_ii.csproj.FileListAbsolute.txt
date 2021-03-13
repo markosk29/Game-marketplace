@@ -24,3 +24,5 @@ D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.dll
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
+D:\VS projects\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\Npgsql.dll
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csproj.CopyComplete

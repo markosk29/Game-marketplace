@@ -1,6 +1,6 @@
-﻿using proiect_ii.DbClasses;
-using System;
+﻿using System;
 using System.Windows;
+using proiect_ii.Database.Account;
 
 
 namespace proiect_ii.Panels
@@ -12,7 +12,10 @@ namespace proiect_ii.Panels
     {
         private RegisterPanel registerPanel;
 
-        public SuggestionsPanel(RegisterPanel registerPanel)
+        private Account newAccount;
+
+        private AccountController accountController;
+        public SuggestionsPanel(RegisterPanel registerPanel, Account newAccount)
         {
             InitializeComponent();
 
@@ -20,6 +23,9 @@ namespace proiect_ii.Panels
 
             this.Left = registerPanel.Left;
             this.Top = registerPanel.Top;
+
+            this.newAccount = newAccount;
+            accountController = new AccountController();
         }
 
         private void PreviousButton(Object sender, RoutedEventArgs e)
@@ -33,8 +39,8 @@ namespace proiect_ii.Panels
         }
 
         private void NextButton(Object sender, RoutedEventArgs e)
-        {
-            ////salveaza chestii in DB
+        { 
+            LinkObjectToDb();
         }
 
 
@@ -44,6 +50,11 @@ namespace proiect_ii.Panels
         {
             registerPanel.Left = this.Left;
             registerPanel.Top = this.Top;
+        }
+
+        private void LinkObjectToDb()
+        {
+            accountController.AddToDatabase(newAccount);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using proiect_ii.Database.Account;
 
 
 namespace proiect_ii.Panels
@@ -10,13 +11,15 @@ namespace proiect_ii.Panels
     /// </summary>
     public partial class RegisterPanel : Window
     {
-        private SuggestionsPanel suggestionsPanel { get; }
+        private SuggestionsPanel suggestionsPanel { get; set; }
+
+        Account newAccount;
 
         public RegisterPanel()
         {
             InitializeComponent();
 
-            suggestionsPanel = new SuggestionsPanel(this);
+            newAccount = new Account();
         }
 
         private void nextButton(object sender, RoutedEventArgs e)
@@ -33,6 +36,11 @@ namespace proiect_ii.Panels
             {
                 if (passwordBox.Password.Equals(confirmPassBox.Password))
                 {
+                    newAccount.username = usernameTextbox.Text;
+                    newAccount.password = passwordBox.Password;
+                    newAccount.email = emailTextbox.Text;
+
+                    suggestionsPanel = new SuggestionsPanel(this, newAccount);
                     suggestionsPanel.Show();
 
                     ResumePanelLocation();
