@@ -15,5 +15,53 @@
 
         <!--*Buton de revenire la fereastra cu inregistrare*-->
         <Button Content="Inapoi" Click="PreviousButton" HorizontalAlignment="Center" Margin="0,500,-350,0" VerticalAlignment="Top" Height="50" Width="150"/>
+
+        <!--*Casute pentru selectare genuri*-->
+        <ComboBox Name="firstComboBox" SelectionChanged="ProcessFirstSelection" HorizontalAlignment="Left" Margin="100,138,0,0" VerticalAlignment="Top" Width="150">
+            <ComboBoxItem>Horror</ComboBoxItem>
+            <ComboBoxItem>Actiune</ComboBoxItem>
+            <ComboBoxItem>Aventura</ComboBoxItem>
+            <ComboBoxItem>RPG</ComboBoxItem>
+            <ComboBoxItem>Platformer</ComboBoxItem>
+            <ComboBoxItem>Curse</ComboBoxItem>
+            <ComboBoxItem>Simulare</ComboBoxItem>
+            <ComboBoxItem>Indie</ComboBoxItem>
+            <ComboBoxItem>MMO</ComboBoxItem>
+            <ComboBoxItem>CO=OP</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox Name="secondComboBox" SelectionChanged="ProcessSecondSelection" HorizontalAlignment="Left" Margin="100,198,0,0" VerticalAlignment="Top" Width="150">
+            <ComboBoxItem>Horror</ComboBoxItem>
+            <ComboBoxItem>Actiune</ComboBoxItem>
+            <ComboBoxItem>Aventura</ComboBoxItem>
+            <ComboBoxItem>RPG</ComboBoxItem>
+            <ComboBoxItem>Platformer</ComboBoxItem>
+            <ComboBoxItem>Curse</ComboBoxItem>
+            <ComboBoxItem>Simulare</ComboBoxItem>
+            <ComboBoxItem>Indie</ComboBoxItem>
+            <ComboBoxItem>MMO</ComboBoxItem>
+            <ComboBoxItem>CO=OP</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox Name="thirdComboBox" SelectionChanged="ProcessThirdSelection" HorizontalAlignment="Left" Margin="100,258,0,0" VerticalAlignment="Top" Width="150">
+            <ComboBoxItem>Horror</ComboBoxItem>
+            <ComboBoxItem>Actiune</ComboBoxItem>
+            <ComboBoxItem>Aventura</ComboBoxItem>
+            <ComboBoxItem>RPG</ComboBoxItem>
+            <ComboBoxItem>Platformer</ComboBoxItem>
+            <ComboBoxItem>Curse</ComboBoxItem>
+            <ComboBoxItem>Simulare</ComboBoxItem>
+            <ComboBoxItem>Indie</ComboBoxItem>
+            <ComboBoxItem>MMO</ComboBoxItem>
+            <ComboBoxItem>CO=OP</ComboBoxItem>
+        </ComboBox>
+
+        <!--*text sus*-->
+        <Label Content="Alegeti-va genurile preferate pentru a va putea oferi recomandari" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+        <!--*linii delimitare jocuri sugerate*-->
+        <Rectangle HorizontalAlignment="Left" Height="282" Margin="453,114,0,0" Stroke="Black" VerticalAlignment="Top" Width="2"/>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="616,450,0,0" Stroke="Black" VerticalAlignment="Top" Width="504"/>
+        <Label Name="testLabel" Content="test" HorizontalAlignment="Left" Margin="553,228,0,0" VerticalAlignment="Top" FontSize="20"/>
     </Grid>
 </Window>
