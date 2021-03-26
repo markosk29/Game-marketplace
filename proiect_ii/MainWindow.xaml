@@ -10,8 +10,19 @@
         MinHeight="650" MinWidth="1200"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="New" Click="newUserButton" HorizontalAlignment="Center" Margin="0,300,325,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <!--*Buton pt creare utilizator nou*-->
+        <Button Content="New" Click="NewUserButton" HorizontalAlignment="Center" Margin="0,300,325,0" VerticalAlignment="Top" Height="50" Width="150"/>
+
+        <!--*Buton logare utilizator existent*-->
         <Button Content="Login" HorizontalAlignment="Center" Margin="0,300,-250,0" VerticalAlignment="Top" Height="50" Width="150"/>
+
+        <!--*Buton temporar pt adaugare jocuri in DB*-->
+        <Button Content="New game" Click="NewGameButton" HorizontalAlignment="Center" Margin="0,430,30,0" VerticalAlignment="Top" Height="50" Width="150"/>
+
+        <!--*text avertisment buton temporar pt new game*-->
+        <Label Content="***buton temporar***" HorizontalAlignment="Center" Margin="0,390,-70,0" VerticalAlignment="Top"  Width="300" FontSize="20" Foreground="Red"/>
+
+        <!--*titlu*-->
         <Label x:Name="mainLabel" Content="Game Marketplace" HorizontalAlignment="Center" Margin="0,190,0,0" VerticalAlignment="Top"  Width="300" FontSize="30"/>
 
     </Grid>

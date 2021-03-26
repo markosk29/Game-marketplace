@@ -16,8 +16,24 @@
         <!--*Buton de revenire la fereastra cu inregistrare*-->
         <Button Content="Inapoi" Click="PreviousButton" HorizontalAlignment="Center" Margin="0,500,-350,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
+        <!--*Buton confirmare selectie categorii*-->
+        <Button Name="confirmButton" Content="Confirmare" Click="ConfirmSelection" HorizontalAlignment="Center" Margin="0,330,850,0" VerticalAlignment="Top" Height="50" Width="150"/>
+
         <!--*Casute pentru selectare genuri*-->
-        <ComboBox Name="firstComboBox" SelectionChanged="ProcessFirstSelection" HorizontalAlignment="Left" Margin="100,138,0,0" VerticalAlignment="Top" Width="150">
+        <ComboBox Name="firstComboBox" HorizontalAlignment="Left" Margin="100,138,0,0" VerticalAlignment="Top" Width="150">
+            <ComboBoxItem>Horror</ComboBoxItem>
+            <ComboBoxItem>Actiune</ComboBoxItem>
+            <ComboBoxItem>Aventura</ComboBoxItem>
+            <ComboBoxItem>RPG</ComboBoxItem>
+            <ComboBoxItem>Platformer</ComboBoxItem>
+            <ComboBoxItem>Curse</ComboBoxItem>
+            <ComboBoxItem>Simulare</ComboBoxItem>
+            <ComboBoxItem>Indie</ComboBoxItem>
+            <ComboBoxItem>MMO</ComboBoxItem>
+            <ComboBoxItem>COOP</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox Name="secondComboBox" HorizontalAlignment="Left" Margin="100,198,0,0" VerticalAlignment="Top" Width="150">
             <ComboBoxItem>Horror</ComboBoxItem>
             <ComboBoxItem>Actiune</ComboBoxItem>
             <ComboBoxItem>Aventura</ComboBoxItem>
@@ -30,20 +46,7 @@
             <ComboBoxItem>CO=OP</ComboBoxItem>
         </ComboBox>
 
-        <ComboBox Name="secondComboBox" SelectionChanged="ProcessSecondSelection" HorizontalAlignment="Left" Margin="100,198,0,0" VerticalAlignment="Top" Width="150">
-            <ComboBoxItem>Horror</ComboBoxItem>
-            <ComboBoxItem>Actiune</ComboBoxItem>
-            <ComboBoxItem>Aventura</ComboBoxItem>
-            <ComboBoxItem>RPG</ComboBoxItem>
-            <ComboBoxItem>Platformer</ComboBoxItem>
-            <ComboBoxItem>Curse</ComboBoxItem>
-            <ComboBoxItem>Simulare</ComboBoxItem>
-            <ComboBoxItem>Indie</ComboBoxItem>
-            <ComboBoxItem>MMO</ComboBoxItem>
-            <ComboBoxItem>CO=OP</ComboBoxItem>
-        </ComboBox>
-
-        <ComboBox Name="thirdComboBox" SelectionChanged="ProcessThirdSelection" HorizontalAlignment="Left" Margin="100,258,0,0" VerticalAlignment="Top" Width="150">
+        <ComboBox Name="thirdComboBox" HorizontalAlignment="Left" Margin="100,258,0,0" VerticalAlignment="Top" Width="150">
             <ComboBoxItem>Horror</ComboBoxItem>
             <ComboBoxItem>Actiune</ComboBoxItem>
             <ComboBoxItem>Aventura</ComboBoxItem>

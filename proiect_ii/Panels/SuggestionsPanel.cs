@@ -50,19 +50,42 @@ namespace proiect_ii.Panels
             this.selectedGenres = new List<int>();
         }
 
-        private void ProcessFirstSelection(Object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void ConfirmSelection(Object sender, RoutedEventArgs e)
         {
-           this.selectedGenres.Add(firstComboBox.SelectedIndex);
+            AddToList(firstComboBox.SelectedIndex);
+            AddToList(secondComboBox.SelectedIndex);
+            AddToList(thirdComboBox.SelectedIndex);
+
+            confirmButton.IsEnabled = false;
+
+            firstComboBox.IsEnabled = false;
+            secondComboBox.IsEnabled = false;
+            thirdComboBox.IsEnabled = false;
         }
 
-        private void ProcessSecondSelection(Object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void AddToList(int index)
         {
-            this.selectedGenres.Add(secondComboBox.SelectedIndex);
+            bool found = false;
+
+            foreach (int genre in this.selectedGenres)
+            {
+                if (genre == index)
+                {
+                    found = true;
+                }
+
+            }
+
+            if (found == false)
+            {
+                this.selectedGenres.Add(index);
+            }
         }
 
-        private void ProcessThirdSelection(Object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void ProcessSuggestions()
         {
-            this.selectedGenres.Add(secondComboBox.SelectedIndex);
+            //suggest games based on categories from available games
+            //no games added to DB yet, can't implement this
         }
 
         private void PreviousButton(Object sender, RoutedEventArgs e)

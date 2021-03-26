@@ -18,7 +18,7 @@ namespace proiect_ii
         }
 
 
-    private void newUserButton(object sender, RoutedEventArgs e)
+        private void NewUserButton(object sender, RoutedEventArgs e)
         {
             RegisterPanel registerPanel = new RegisterPanel();
 
@@ -26,6 +26,15 @@ namespace proiect_ii
 
             this.Close();
             
+        }
+
+        private void NewGameButton(object sender, RoutedEventArgs e)
+        {
+            NewGamePanel newGamePanel = new NewGamePanel();
+
+            newGamePanel.Show();
+
+            this.Close();
         }
     }
 }
