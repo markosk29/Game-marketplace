@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proiect_ii.Panels"
         mc:Ignorable="d"
-        Title="NewGamePanel" Height="450" Width="800">
+        Title="NewGamePanel" Height="650" Width="1200"
+        MinHeight="650" MinWidth="1200"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+
+        <TextBox Name="gameNameTextbox" HorizontalAlignment="Left" Margin="146,110,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="12" MaxLines="1"/>
+        <Label Content="Game name:" HorizontalAlignment="Left" Margin="31,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.416,-1.081"/>
+
+        <TextBox Name="gamePublisherTextbox" HorizontalAlignment="Left" Margin="146,150,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="12" MaxLines="1"/>
+        <Label Content="Game publisher:" HorizontalAlignment="Left" Margin="31,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.416,-1.081"/>
+
+        <TextBox Name="gameDevTextbox" HorizontalAlignment="Left" Margin="146,190,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="12" MaxLines="1"/>
+        <Label Content="Game dev:" HorizontalAlignment="Left" Margin="31,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.416,-1.081"/>
+
+        <TextBox Name="gameCategoriesTextbox" HorizontalAlignment="Left" Margin="146,230,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="12" MaxLines="1"/>
+        <Label Content="Game category:" HorizontalAlignment="Left" Margin="31,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.416,-1.081"/>
+
+        <TextBox Name="gameDescriptionTextbox" HorizontalAlignment="Left" Margin="146,270,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Height="127"/>
+        <Label Content="Game description:" HorizontalAlignment="Left" Margin="31,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.416,-1.081"/>
+
     </Grid>
 </Window>

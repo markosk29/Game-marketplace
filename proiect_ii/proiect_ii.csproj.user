@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Panels\NewGamePanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Panels\RegisterPanel.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,6 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Panels\NewGamePanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Panels\RegisterPanel.xaml">
