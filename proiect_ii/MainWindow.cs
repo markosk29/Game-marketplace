@@ -7,6 +7,7 @@ using proiect_ii.Database.Account;
 
 namespace proiect_ii
 {
+    // am descarcar si eu
     /// <summary>
     /// Panou principal
     /// </summary>

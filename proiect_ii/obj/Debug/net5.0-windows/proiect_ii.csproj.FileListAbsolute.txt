@@ -58,3 +58,33 @@ D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proi
 D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
 D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
 D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.exe
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.deps.json
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.runtimeconfig.json
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.runtimeconfig.dev.json
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.dll
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\ref\proiect_ii.dll
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.pdb
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\Npgsql.dll
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csprojAssemblyReference.cache
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\NewGamePanel.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RegisterPanel.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\SuggestionsPanel.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\App.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii_MarkupCompile.cache
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii_MarkupCompile.lref
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\NewGamePanel.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RegisterPanel.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\SuggestionsPanel.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.g.resources
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.GeneratedMSBuildEditorConfig.editorconfig
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.AssemblyInfoInputs.cache
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.AssemblyInfo.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csproj.CoreCompileInputs.cache
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csproj.CopyComplete
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.dll
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
