@@ -28,3 +28,33 @@ D:\VS projects\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\Npgsql.dll
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csproj.CopyComplete
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\NewGamePanel.g.cs
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\NewGamePanel.baml
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.exe
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.deps.json
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.runtimeconfig.json
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.runtimeconfig.dev.json
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.dll
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\ref\proiect_ii.dll
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\proiect_ii.pdb
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\bin\Debug\net5.0-windows\Npgsql.dll
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csprojAssemblyReference.cache
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\NewGamePanel.g.cs
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RegisterPanel.g.cs
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\SuggestionsPanel.g.cs
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\App.g.cs
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii_MarkupCompile.cache
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii_MarkupCompile.lref
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\MainWindow.baml
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\NewGamePanel.baml
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RegisterPanel.baml
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\SuggestionsPanel.baml
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.g.resources
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.GeneratedMSBuildEditorConfig.editorconfig
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.AssemblyInfoInputs.cache
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.AssemblyInfo.cs
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csproj.CoreCompileInputs.cache
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csproj.CopyComplete
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.dll
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
+D:\POLI AN 3\SEM2\II Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
