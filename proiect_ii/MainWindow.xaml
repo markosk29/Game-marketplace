@@ -14,7 +14,7 @@
         <Button Content="New" Click="NewUserButton" HorizontalAlignment="Center" Margin="0,300,325,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Buton logare utilizator existent*-->
-        <Button Content="Login" HorizontalAlignment="Center" Margin="0,300,-300,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="620,300,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Buton temporar pt adaugare jocuri in DB*-->
         <Button Content="New game" Click="NewGameButton" HorizontalAlignment="Center" Margin="0,430,30,0" VerticalAlignment="Top" Height="50" Width="150"/>

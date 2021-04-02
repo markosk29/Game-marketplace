@@ -78,19 +78,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {}
+    "C:\\Users\\Markos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\POLI AN 3\\SEM2\\II Proiect\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
+      "projectUniqueName": "D:\\VS projects\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
       "projectName": "proiect_ii",
-      "projectPath": "D:\\POLI AN 3\\SEM2\\II Proiect\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "D:\\POLI AN 3\\SEM2\\II Proiect\\proiect_ii\\proiect_ii\\obj\\",
+      "projectPath": "D:\\VS projects\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
+      "packagesPath": "C:\\Users\\Markos\\.nuget\\packages\\",
+      "outputPath": "D:\\VS projects\\proiect_ii\\proiect_ii\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Markos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -139,7 +144,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
