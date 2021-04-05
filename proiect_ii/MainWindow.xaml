@@ -26,10 +26,10 @@
         <Button Content="Login" HorizontalAlignment="Left" Margin="620,300,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Buton temporar pt adaugare jocuri in DB*-->
-        <Button Content="New game" Click="NewGameButton" HorizontalAlignment="Center" Margin="0,430,30,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="New game" Click="NewGameButton" HorizontalAlignment="Center" Margin="0,430,30,0" VerticalAlignment="Top" Height="50" Width="150" IsEnabled="False"/>
 
         <!--*text avertisment buton temporar pt new game*-->
-        <Label Content="***buton temporar***" HorizontalAlignment="Center" Margin="0,390,-70,0" VerticalAlignment="Top"  Width="300" FontSize="20" Foreground="Red"/>
+        <Label Content="***temp***" HorizontalAlignment="Left" Margin="531,388,0,0" VerticalAlignment="Top"  Width="300" FontSize="20" Foreground="Red"/>
 
         <!--*titlu*-->
         <Label x:Name="mainLabel" Content="Game Marketplace" HorizontalAlignment="Center" Margin="0,190,0,0" VerticalAlignment="Top"  Width="300" FontSize="30"/>

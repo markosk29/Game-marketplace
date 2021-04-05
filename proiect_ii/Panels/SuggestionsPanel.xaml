@@ -11,60 +11,91 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Urmatorul" Click="NextButton" HorizontalAlignment="Center" Margin="0,500,-750,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Next" Click="NextButton" HorizontalAlignment="Center" Margin="0,500,-750,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Buton de revenire la fereastra cu inregistrare*-->
-        <Button Content="Inapoi" Click="PreviousButton" HorizontalAlignment="Center" Margin="0,500,-350,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Previous" Click="PreviousButton" HorizontalAlignment="Center" Margin="0,500,-350,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Buton confirmare selectie categorii*-->
-        <Button Name="confirmButton" Content="Confirmare" Click="ConfirmSelection" HorizontalAlignment="Center" Margin="0,330,850,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Name="confirmButton" Content="Confirm" Click="ConfirmSelection" HorizontalAlignment="Center" Margin="0,330,850,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Casute pentru selectare genuri*-->
         <ComboBox Name="firstComboBox" HorizontalAlignment="Left" Margin="100,138,0,0" VerticalAlignment="Top" Width="150">
             <ComboBoxItem>Horror</ComboBoxItem>
-            <ComboBoxItem>Actiune</ComboBoxItem>
-            <ComboBoxItem>Aventura</ComboBoxItem>
+            <ComboBoxItem>Action</ComboBoxItem>
+            <ComboBoxItem>Adventure</ComboBoxItem>
             <ComboBoxItem>RPG</ComboBoxItem>
             <ComboBoxItem>Platformer</ComboBoxItem>
-            <ComboBoxItem>Curse</ComboBoxItem>
-            <ComboBoxItem>Simulare</ComboBoxItem>
+            <ComboBoxItem>Racing</ComboBoxItem>
+            <ComboBoxItem>Simulation</ComboBoxItem>
             <ComboBoxItem>Indie</ComboBoxItem>
             <ComboBoxItem>MMO</ComboBoxItem>
             <ComboBoxItem>COOP</ComboBoxItem>
+            <ComboBoxItem>OpenWorld</ComboBoxItem>
+            <ComboBoxItem>Shooter</ComboBoxItem>
+            <ComboBoxItem>Strategy</ComboBoxItem>
+            <ComboBoxItem>Casual</ComboBoxItem>
+            <ComboBoxItem>Sports</ComboBoxItem>
+            <ComboBoxItem>SciFi</ComboBoxItem>
+            <ComboBoxItem>VR</ComboBoxItem>
+            <ComboBoxItem>PostApocalyptic</ComboBoxItem>
+            <ComboBoxItem>Survival</ComboBoxItem>
         </ComboBox>
 
         <ComboBox Name="secondComboBox" HorizontalAlignment="Left" Margin="100,198,0,0" VerticalAlignment="Top" Width="150">
             <ComboBoxItem>Horror</ComboBoxItem>
-            <ComboBoxItem>Actiune</ComboBoxItem>
-            <ComboBoxItem>Aventura</ComboBoxItem>
+            <ComboBoxItem>Action</ComboBoxItem>
+            <ComboBoxItem>Adventure</ComboBoxItem>
             <ComboBoxItem>RPG</ComboBoxItem>
             <ComboBoxItem>Platformer</ComboBoxItem>
-            <ComboBoxItem>Curse</ComboBoxItem>
-            <ComboBoxItem>Simulare</ComboBoxItem>
+            <ComboBoxItem>Racing</ComboBoxItem>
+            <ComboBoxItem>Simulation</ComboBoxItem>
             <ComboBoxItem>Indie</ComboBoxItem>
             <ComboBoxItem>MMO</ComboBoxItem>
-            <ComboBoxItem>CO=OP</ComboBoxItem>
+            <ComboBoxItem>COOP</ComboBoxItem>
+            <ComboBoxItem>OpenWorld</ComboBoxItem>
+            <ComboBoxItem>Shooter</ComboBoxItem>
+            <ComboBoxItem>Strategy</ComboBoxItem>
+            <ComboBoxItem>Casual</ComboBoxItem>
+            <ComboBoxItem>Sports</ComboBoxItem>
+            <ComboBoxItem>SciFi</ComboBoxItem>
+            <ComboBoxItem>VR</ComboBoxItem>
+            <ComboBoxItem>PostApocalyptic</ComboBoxItem>
+            <ComboBoxItem>Survival</ComboBoxItem>
         </ComboBox>
 
         <ComboBox Name="thirdComboBox" HorizontalAlignment="Left" Margin="100,258,0,0" VerticalAlignment="Top" Width="150">
             <ComboBoxItem>Horror</ComboBoxItem>
-            <ComboBoxItem>Actiune</ComboBoxItem>
-            <ComboBoxItem>Aventura</ComboBoxItem>
+            <ComboBoxItem>Action</ComboBoxItem>
+            <ComboBoxItem>Adventure</ComboBoxItem>
             <ComboBoxItem>RPG</ComboBoxItem>
             <ComboBoxItem>Platformer</ComboBoxItem>
-            <ComboBoxItem>Curse</ComboBoxItem>
-            <ComboBoxItem>Simulare</ComboBoxItem>
+            <ComboBoxItem>Racing</ComboBoxItem>
+            <ComboBoxItem>Simulation</ComboBoxItem>
             <ComboBoxItem>Indie</ComboBoxItem>
             <ComboBoxItem>MMO</ComboBoxItem>
-            <ComboBoxItem>CO=OP</ComboBoxItem>
+            <ComboBoxItem>COOP</ComboBoxItem>
+            <ComboBoxItem>OpenWorld</ComboBoxItem>
+            <ComboBoxItem>Shooter</ComboBoxItem>
+            <ComboBoxItem>Strategy</ComboBoxItem>
+            <ComboBoxItem>Casual</ComboBoxItem>
+            <ComboBoxItem>Sports</ComboBoxItem>
+            <ComboBoxItem>SciFi</ComboBoxItem>
+            <ComboBoxItem>VR</ComboBoxItem>
+            <ComboBoxItem>PostApocalyptic</ComboBoxItem>
+            <ComboBoxItem>Survival</ComboBoxItem>
         </ComboBox>
 
         <!--*text sus*-->
-        <Label Content="Alegeti-va genurile preferate pentru a va putea oferi recomandari" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Select your favorite genres so we can suggest you games" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" FontSize="20"/>
 
         <!--*linii delimitare jocuri sugerate*-->
         <Rectangle HorizontalAlignment="Left" Height="282" Margin="453,114,0,0" Stroke="Black" VerticalAlignment="Top" Width="2"/>
         <Rectangle HorizontalAlignment="Left" Height="2" Margin="616,450,0,0" Stroke="Black" VerticalAlignment="Top" Width="504"/>
-        <Label Name="testLabel" Content="test" HorizontalAlignment="Left" Margin="553,228,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Name="testLabel1" Content=" " HorizontalAlignment="Left" Margin="544,112,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="testLabel2" Content=" " HorizontalAlignment="Left" Margin="544,154,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="testLabel3" Content=" " HorizontalAlignment="Left" Margin="544,198,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="testLabel4" Content=" " HorizontalAlignment="Left" Margin="544,251,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="testLabel5" Content=" " HorizontalAlignment="Left" Margin="544,303,0,0" VerticalAlignment="Top" FontSize="20"/>
     </Grid>
 </Window>

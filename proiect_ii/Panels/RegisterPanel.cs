@@ -30,7 +30,7 @@ namespace proiect_ii.Panels
                 || String.IsNullOrEmpty(passwordBox.Password)
                 || String.IsNullOrEmpty(emailTextbox.Text))
             {
-                SendError("Camp gol!!!");
+                SendError("One or more fields are empty!");
             }
             else
             {
@@ -49,7 +49,7 @@ namespace proiect_ii.Panels
                 }
                 else
                 {
-                    SendError("Parolele nu corespund!!!");
+                    SendError("Passwords must match!");
                 }
             }
         }

@@ -11,21 +11,21 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Urmatorul" Click="nextButton" HorizontalAlignment="Center" Margin="0,500,-750,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Next" Click="nextButton" HorizontalAlignment="Center" Margin="0,500,-750,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Casuta nume de utilizator*-->
         <Rectangle HorizontalAlignment="Center" Height="37" Margin="0,100,650,0" Stroke="Black" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="usernameLabel" Content="Nume de utilizator:" HorizontalAlignment="Center" Margin="0,102,800,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="usernameLabel" Content="Username:" HorizontalAlignment="Center" Margin="0,102,800,0" VerticalAlignment="Top" FontSize="14"/>
         <TextBox Name="usernameTextbox" HorizontalAlignment="Center" Margin="0,110,500,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="12" MaxLines="1"/>
 
         <!--*Casuta parola*-->
         <Rectangle HorizontalAlignment="Center" Height="37" Margin="0,175,650,0" Stroke="Black" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="passwordLabel" Content="Parola:" HorizontalAlignment="Center" Margin="0,177,800,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="passwordLabel" Content="Password:" HorizontalAlignment="Center" Margin="0,177,800,0" VerticalAlignment="Top" FontSize="14"/>
         <PasswordBox Name="passwordBox" HorizontalAlignment="Center" Margin="0,185,500,0" VerticalAlignment="Top" Width="120"/>
 
         <!--*Casuta confirmare parola*-->
         <Rectangle HorizontalAlignment="Center" Height="37" Margin="0,240,650,0" Stroke="Black" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="confirmPassLabel" Content="Confirmare Parola:" HorizontalAlignment="Center" Margin="0,242,800,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="confirmPassLabel" Content="Confirm password:" HorizontalAlignment="Center" Margin="0,242,800,0" VerticalAlignment="Top" FontSize="14"/>
         <PasswordBox Name="confirmPassBox" HorizontalAlignment="Center" Margin="0,250,500,0" VerticalAlignment="Top" Width="120"/>
 
         <!--*Casuta nume de utilizator*-->
