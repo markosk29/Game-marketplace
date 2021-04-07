@@ -7,7 +7,7 @@ using proiect_ii.Database.Account;
 
 namespace proiect_ii
 {
-    // am descarcar si eu
+    /// am descarcar si eu
     /// <summary>
     /// Panou principal
     /// </summary>
@@ -35,6 +35,10 @@ namespace proiect_ii
 
             newGamePanel.Show();
 
+            this.Close();
+        }
+        private void ExitButton(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }

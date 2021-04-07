@@ -8,32 +8,45 @@
         Title="Steam 2.0" 
         Height="650" Width="1200"
         MinHeight="650" MinWidth="1200"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+    <Window.Background>
+        <ImageBrush 
+            ImageSource="/Panels/register1.png" AlignmentX="Left" AlignmentY="Top">
+        </ImageBrush>
+    </Window.Background>
+
     <Grid>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Next" Click="nextButton" HorizontalAlignment="Center" Margin="0,500,-750,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Next" Click="nextButton" HorizontalAlignment="Left" Margin="700,504,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
 
         <!--*Casuta nume de utilizator*-->
-        <Rectangle HorizontalAlignment="Center" Height="37" Margin="0,100,650,0" Stroke="Black" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="usernameLabel" Content="Username:" HorizontalAlignment="Center" Margin="0,102,800,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox Name="usernameTextbox" HorizontalAlignment="Center" Margin="0,110,500,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="12" MaxLines="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,199,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
+        <Label x:Name="usernameLabel" Content="Username:" HorizontalAlignment="Left" Margin="307,207,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox Name="usernameTextbox" HorizontalAlignment="Left" Margin="463,215,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="362" MaxLength="12" MaxLines="1"/>
 
         <!--*Casuta parola*-->
-        <Rectangle HorizontalAlignment="Center" Height="37" Margin="0,175,650,0" Stroke="Black" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="passwordLabel" Content="Password:" HorizontalAlignment="Center" Margin="0,177,800,0" VerticalAlignment="Top" FontSize="14"/>
-        <PasswordBox Name="passwordBox" HorizontalAlignment="Center" Margin="0,185,500,0" VerticalAlignment="Top" Width="120"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,275,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
+        <Label x:Name="passwordLabel" Content="Password:" HorizontalAlignment="Left" Margin="310,282,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <PasswordBox Name="passwordBox" HorizontalAlignment="Left" Margin="463,290,0,0" VerticalAlignment="Top" Width="362"/>
 
         <!--*Casuta confirmare parola*-->
-        <Rectangle HorizontalAlignment="Center" Height="37" Margin="0,240,650,0" Stroke="Black" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="confirmPassLabel" Content="Confirm password:" HorizontalAlignment="Center" Margin="0,242,800,0" VerticalAlignment="Top" FontSize="14"/>
-        <PasswordBox Name="confirmPassBox" HorizontalAlignment="Center" Margin="0,250,500,0" VerticalAlignment="Top" Width="120"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,349,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
+        <Label x:Name="confirmPassLabel" Content="Confirm password:" HorizontalAlignment="Left" Margin="282,357,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <PasswordBox Name="confirmPassBox" HorizontalAlignment="Left" Margin="463,365,0,0" VerticalAlignment="Top" Width="362"/>
 
         <!--*Casuta nume de utilizator*-->
-        <Rectangle HorizontalAlignment="Center" Height="37" Margin="0,305,650,0" Stroke="Black" VerticalAlignment="Top" Width="325"/>
-        <Label x:Name="emailLabel" Content="E-mail:" HorizontalAlignment="Center" Margin="0,307,800,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox Name="emailTextbox" HorizontalAlignment="Center" Margin="0,315,500,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="32" MaxLines="1"/>
-        
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,424,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
+        <Label x:Name="emailLabel" Content="E-mail:" HorizontalAlignment="Left" Margin="319,432,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox Name="emailTextbox" HorizontalAlignment="Left" Margin="463,440,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="362" MaxLength="32" MaxLines="1"/>
+
         <!--*Mesaje de eroare*-->
         <Label x:Name="errorLabel" Content="" HorizontalAlignment="Center" Margin="0,200,-450,0" VerticalAlignment="Top" FontSize="16" Foreground="Red"/>
+        <!--*Butonul de exit*-->
+        
+        <Button Content="Exit" Click="ExitButton2" HorizontalAlignment="Left" Margin="450,504,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
+
+
+
     </Grid>
 </Window>

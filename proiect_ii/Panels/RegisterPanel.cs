@@ -68,5 +68,10 @@ namespace proiect_ii.Panels
             suggestionsPanel.Top = this.Top;
         }
 
+        private void ExitButton2(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

@@ -1,20 +1,20 @@
 ﻿proiect_ii
-1.0.0.0
+
 
 winexe
 C#
 .cs
-D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\obj\Debug\net5.0-windows\
+D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\obj\Release\net5.0-windows\
 proiect_ii
 none
 false
-TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\App.xaml
 4-122359329
 
-12-1041827178
+10-497567840
 1941071807909
 MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\RegisterPanel.xaml;Panels\SuggestionsPanel.xaml;
 
-False
+True
 
