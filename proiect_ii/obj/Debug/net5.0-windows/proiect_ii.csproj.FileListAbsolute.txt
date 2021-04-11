@@ -118,3 +118,5 @@ D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\obj\Debug\net5.0-windows\proiect
 D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
 D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
 D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RecoverPanel.g.cs
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RecoverPanel.baml

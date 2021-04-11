@@ -1,26 +1,11 @@
-﻿using Npgsql;
+﻿using System.Windows.Documents;
+using Npgsql;
 
 namespace proiect_ii.Database.Account
 {
 
     class AccountController : DBController
     {
-
-        //tabelul e deja creat, nu apela aceasta metoda, l-am folosit doar la inceput
-        public void CreateTable()
-        {
-            using (var conn = new NpgsqlConnection(GetConnectionString()))
-            {
-                conn.Open();
-
-                using (var command = new NpgsqlCommand("CREATE TABLE accounts(id serial PRIMARY KEY, username VARCHAR(50), password VARCHAR(50), email VARCHAR(50))", conn))
-                {
-                    command.ExecuteNonQuery();
-                }
-
-                conn.Close();
-            }
-        }
         public void AddToDatabase(Account account)
         {
             using (var conn = new NpgsqlConnection(GetConnectionString()))
@@ -38,6 +23,32 @@ namespace proiect_ii.Database.Account
 
                 conn.Close();
             }
+        }
+
+        public Account GetUser(string username)
+        {
+            Account account = new Account();
+
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("SELECT * FROM accounts WHERE '" +username+ "' ~ username", conn))
+                {
+                    var reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        account.username = reader.GetString(1);
+                        account.password = reader.GetString(2);
+                        account.email = reader.GetString(3);
+                    }
+                }
+
+                conn.Close();
+            }
+
+            return account;
         }
     }
 }

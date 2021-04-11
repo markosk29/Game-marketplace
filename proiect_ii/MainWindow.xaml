@@ -16,11 +16,19 @@
         </ImageBrush>
     </Window.Background>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="287*"/>
+        </Grid.ColumnDefinitions>
         <!--*titlu*-->
 
 
         <!--*Buton pt creare utilizator nou*-->
-        <Button Content="New User" Click="NewUserButton" HorizontalAlignment="Left" Margin="133,394,0,0" VerticalAlignment="Top" Height="50" Width="150" RenderTransformOrigin="0.5,0.5" Visibility="Visible" BorderBrush="{x:Null}" Background="#FFCED4DA" FontFamily="Segoe UI" FontSize="20" FontWeight="Bold">
+        <Label Content="Password" HorizontalAlignment="Left" Margin="66,248,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Grid.Column="1"/>
+
+
+        <!--*Buton pt creare utilizator nou*-->
+        <Button Content="New User" Click="NewUserButton" HorizontalAlignment="Left" Margin="81,394,0,0" VerticalAlignment="Top" Height="50" Width="150" RenderTransformOrigin="0.5,0.5" Visibility="Visible" BorderBrush="{x:Null}" Background="#FFCED4DA" FontFamily="Segoe UI" FontSize="20" FontWeight="Bold" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -32,23 +40,21 @@
         </Button>
 
         <!--*Buton logare utilizator existent*-->
-        <Button Content="Login" HorizontalAlignment="Left" Margin="133,332,0,0" VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False"/>
+        <Button Content="Login" Click="LoginUser" HorizontalAlignment="Left" Margin="81,332,0,0" VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Grid.Column="1"/>
 
-        <!--*Buton temporar pt adaugare jocuri in DB*-->
         <!--Aici ma gandesc sa facem o lista scurta, mai discutam despre asta-->
-        <Button Content="View Games" Click="NewGameButton" HorizontalAlignment="Left" Margin="133,456,0,0" VerticalAlignment="Top" Height="50" Width="150" IsEnabled="False" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="20"/>
+        <Button Content="View Games" Click="NewGameButton" HorizontalAlignment="Left" Margin="81,456,0,0" VerticalAlignment="Top" Height="50" Width="150" IsEnabled="False" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="20" Grid.Column="1"/>
 
 
         <!--*Butonul de exit*-->
-        <Button Content="Exit" Click="ExitButton" HorizontalAlignment="Left" Margin="133,518,0,0" VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False"/>
+        <Button Content="Exit" Click="ExitButton" HorizontalAlignment="Left" Margin="81,518,0,0" VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Grid.Column="1"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="118,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30" FontSize="20" FontWeight="Normal"/>
+        <Button Content="Recover" x:Name="recoverButton" Visibility="Hidden" Click="RecoverAccount" HorizontalAlignment="Left" Margin="181,254,0,0" VerticalAlignment="Top" Height="25" Width="67" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Grid.Column="1"/>
 
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="118,285,0,0" VerticalAlignment="Top" Width="200" Height="30" FontSize="20"/>
-        <Label Content="User" HorizontalAlignment="Left" Margin="118,181,0,0" VerticalAlignment="Top" Width="200" FontSize="20"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="118,248,0,0" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <TextBox x:Name="usernameBox" HorizontalAlignment="Left" Margin="66,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30" FontSize="20" FontWeight="Normal" BorderBrush="#FFB3ABAB" Grid.Column="1"/>
 
-
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="66,285,0,0" VerticalAlignment="Top" Width="200" Height="30" FontSize="20" Background="White" Grid.Column="1"/>
+        <Label Content="User" HorizontalAlignment="Left" Margin="66,181,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Grid.Column="1"/>
 
     </Grid>
 </Window>

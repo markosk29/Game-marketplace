@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\obj\Debug\net5.0-windows\
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\
 proiect_ii
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\POLI AN 3\SEM2\II Proiect\proiect\proiect_ii\App.xaml
-4-122359329
+D:\VS projects\proiect_ii\proiect_ii\App.xaml
+51664055492
 
-12-1041827178
-1941071807909
-MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\RegisterPanel.xaml;Panels\SuggestionsPanel.xaml;
+13-1845932295
+194549852929
+MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\SuggestionsPanel.xaml;
 
-False
+True
 

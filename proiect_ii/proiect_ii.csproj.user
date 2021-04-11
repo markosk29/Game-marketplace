@@ -10,6 +10,9 @@
     <Compile Update="Panels\NewGamePanel.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Panels\RecoverPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Panels\RegisterPanel.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Panels\NewGamePanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Panels\RecoverPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Panels\RegisterPanel.xaml">
