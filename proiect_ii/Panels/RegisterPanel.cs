@@ -11,15 +11,13 @@ namespace proiect_ii.Panels
     /// </summary>
     public partial class RegisterPanel : Window
     {
-        private SuggestionsPanel suggestionsPanel { get; set; }
-
-        Account newAccount;
+        Account _newAccount;
 
         public RegisterPanel()
         {
             InitializeComponent();
 
-            newAccount = new Account();
+            this._newAccount = new Account();
         }
 
         private void nextButton(object sender, RoutedEventArgs e)
@@ -36,14 +34,12 @@ namespace proiect_ii.Panels
             {
                 if (passwordBox.Password.Equals(confirmPassBox.Password))
                 {
-                    newAccount.username = usernameTextbox.Text;
-                    newAccount.password = passwordBox.Password;
-                    newAccount.email = emailTextbox.Text;
+                    _newAccount.username = usernameTextbox.Text;
+                    _newAccount.password = passwordBox.Password;
+                    _newAccount.email = emailTextbox.Text;
 
-                    suggestionsPanel = new SuggestionsPanel(this, newAccount);
-                    suggestionsPanel.Show();
-
-                    ResumePanelLocation();
+                    QuestionsPanel questionsPanel = new QuestionsPanel(this, _newAccount);
+                    questionsPanel.Show();
 
                     this.Hide();
                 }
@@ -60,17 +56,10 @@ namespace proiect_ii.Panels
             label.Content = errorMessage;
         }
 
-        //in cazul apasarii butonului next, 
-        //panoul de sugestii sa fie pe aceeasi locatie ca si cel de inregistrare
-        private void ResumePanelLocation()
-        {
-            suggestionsPanel.Left = this.Left;
-            suggestionsPanel.Top = this.Top;
-        }
-
-        private void ExitButton2(object sender, RoutedEventArgs e)
+        private void ExitButton(object sender, RoutedEventArgs e)
         {
             this.Close();
+            Application.Current.Shutdown();
         }
 
     }

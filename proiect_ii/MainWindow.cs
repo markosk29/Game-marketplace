@@ -31,7 +31,7 @@ namespace proiect_ii
 
         private void LoginUser(object sender, RoutedEventArgs e)
         {
-            Account user = _accountController.GetUser(usernameBox.Text);
+            Account user = _accountController.GetAccountByUsername(usernameBox.Text);
 
             if (user.username == null)
             {
@@ -85,6 +85,7 @@ namespace proiect_ii
         private void ExitButton(object sender, RoutedEventArgs e)
         {
             this.Close();
+            Application.Current.Shutdown();
         }
 
         private void ThrowError(int id)
@@ -95,14 +96,16 @@ namespace proiect_ii
             prevColor.B = 171;
             prevColor.A = 255;
 
-            if (id == 1)
+            switch (id)
             {
-                passwordBox.BorderBrush = new SolidColorBrush(Colors.Red);
-                usernameBox.BorderBrush = new SolidColorBrush(prevColor);
-            } else if (id == 2)
-            {
-                usernameBox.BorderBrush = new SolidColorBrush(Colors.Red);
-                passwordBox.BorderBrush = new SolidColorBrush(prevColor);
+                case 1:
+                    passwordBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                    usernameBox.BorderBrush = new SolidColorBrush(prevColor);
+                    break;
+                case 2:
+                    usernameBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                    passwordBox.BorderBrush = new SolidColorBrush(prevColor);
+                    break;
             }
 
             recoverButton.Visibility = Visibility.Visible;

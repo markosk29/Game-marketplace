@@ -11,10 +11,61 @@
         MaxHeight="650" MaxWidth="1200"
         WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
+        <!--*label email*-->
+        <Label x:Name="emailLabel" Content="Email" HorizontalAlignment="Left" Margin="74,214,0,0" 
+               VerticalAlignment="Top" Width="200" FontSize="20"/>
+
         <!--*buton inapoi catre panoul principal*-->
-        <Button Content="Return" Click="Return" HorizontalAlignment="Left" Margin="33,24,0,0" VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False"/>
+        <Button Content="Return" Click="Return" HorizontalAlignment="Left" Margin="33,24,0,0"
+                VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False"/>
+
+        <!--*buton confirmare email*-->
+        <Button Name="confirmButton" Content="Confirm" Click="VerifyEmail" HorizontalAlignment="Left" Margin="167,275,0,0"
+                VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False"/>
+
+        <!--*buton confirmare raspunsuri*-->
+        <Button Name="confirmAnswersButton" Content="Confirm" Click="VerifyAnswers" HorizontalAlignment="Left" Margin="506,458,0,0"
+                VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Visibility="Hidden"/>
 
         <!--*box email*-->
-        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Margin="151,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30" FontSize="20" FontWeight="Normal" BorderBrush="#FFB3ABAB"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Margin="142,217,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="200" Height="30" FontSize="20" FontWeight="Normal" BorderBrush="#FFB3ABAB"/>
+
+        <!--*Label eroare*-->
+        <Label x:Name="errorLabel" Content="Error" HorizontalAlignment="Left" Margin="55,556,0,0"
+               VerticalAlignment="Top" Height="46" Width="562" FontSize="25" Foreground="Red"/>
+
+        <!--*Labeluri intrebari*-->
+        <Label x:Name="securityQuestion1" Content="Question 1:" HorizontalAlignment="Left" Margin="55,148,0,0" 
+               VerticalAlignment="Top" Height="43" Width="627" FontSize="25" Visibility="Hidden"/>
+        <Label x:Name="securityQuestion2" Content="Question 2" HorizontalAlignment="Left" Margin="55,243,0,0"
+               VerticalAlignment="Top" Height="43" Width="627" FontSize="25" Visibility="Hidden"/>
+        <Label x:Name="securityQuestion3" Content="Question 3" HorizontalAlignment="Left" Margin="55,325,0,0" 
+               VerticalAlignment="Top" Height="43" Width="627" FontSize="25" Visibility="Hidden"/>
+
+        <!--*Raspunsuri*-->
+        <TextBox Name="firstAnswer" HorizontalAlignment="Left" Margin="682,154,0,0" Text="" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="426" MaxLength="32" MaxLines="1" Height="31" FontSize="18" Visibility="Hidden"/>
+        <TextBox x:Name="secondAnswer" HorizontalAlignment="Left" Margin="682,249,0,0" Text="" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="426" MaxLength="32" MaxLines="1" Height="31" FontSize="18" Visibility="Hidden"/>
+        <TextBox x:Name="thirdAnswer" HorizontalAlignment="Left" Margin="682,332,0,0" Text=""
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="426" MaxLength="32" MaxLines="1" Height="30" FontSize="18" Visibility="Hidden"/>
+
+        <!--*schimbare parola*-->
+        <Label x:Name="welcomeLabel" Content="Welcome, Markos!" HorizontalAlignment="Left" Margin="445,102,0,0" 
+               VerticalAlignment="Top" Height="52" Width="237" FontSize="25" Visibility="Hidden"/>
+        <Label x:Name="changePasswordLabel" Content="Please, change your password:" HorizontalAlignment="Left" Margin="409,170,0,0" 
+               VerticalAlignment="Top" Height="38" Width="282" FontSize="20" Visibility="Hidden"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="450,232,0,0" 
+            VerticalAlignment="Top" Width="200" Height="30" FontSize="20" FontWeight="Normal" BorderBrush="#FFB3ABAB" Visibility="Hidden"/>
+        <Button x:Name="confirmPasswordChange" Content="I'm ready!" Click="ConfirmPasswordChange" HorizontalAlignment="Left" Margin="475,312,0,0"
+            VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Visibility="Hidden"/>
+
+        <!--*Inapoi la meniul principal*-->
+        <Label x:Name="succesMessageLabel" Content="Password succesfully updated!" HorizontalAlignment="Left" Margin="409,170,0,0" 
+               VerticalAlignment="Top" Height="38" Width="282" FontSize="20" Visibility="Hidden"/>
+        <Button x:Name="returnToLoginButton" Content="Return to login" Click="ReturnToLogin" HorizontalAlignment="Left" Margin="475,220,0,0"
+                VerticalAlignment="Top" Height="50" Width="150" FontSize="20" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Visibility="Hidden"/>
+
     </Grid>
 </Window>

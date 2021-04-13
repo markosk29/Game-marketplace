@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using proiect_ii.Database.Account;
 using proiect_ii.Database.Game;
 
@@ -39,9 +36,9 @@ namespace proiect_ii.Panels
     /// </summary>
     public partial class SuggestionsPanel : Window
     {
-        private RegisterPanel registerPanel;
+        private QuestionsPanel _questionsPanel;
 
-        private Account newAccount;
+        private Account _newAccount;
 
         private AccountController accountController;
 
@@ -54,15 +51,15 @@ namespace proiect_ii.Panels
         private List<string> thirdCategories;
         private List<Label> labels;
 
-        public SuggestionsPanel(RegisterPanel registerPanel, Account newAccount)
+        public SuggestionsPanel(QuestionsPanel questionsPanel, Account newAccount)
         {
             InitializeComponent();
 
-            this.registerPanel = registerPanel;
-            this.newAccount = newAccount;
+            this._questionsPanel = questionsPanel;
+            this._newAccount = newAccount;
 
-            this.Left = registerPanel.Left;
-            this.Top = registerPanel.Top;
+            this.Left = _questionsPanel.Left;
+            this.Top = _questionsPanel.Top;
 
             this.accountController = new AccountController();
             this.gameController = new GameController();
@@ -110,6 +107,8 @@ namespace proiect_ii.Panels
             }
         }
 
+        //implementation 1: Take selected genres in order and show games that match those genre
+        //priority to those games that match the most selected genres
         private void ProcessSuggestions()
         {
             availableGames = gameController.ReadFromDatabase("name");
@@ -134,7 +133,7 @@ namespace proiect_ii.Panels
 
         private void PreviousButton(Object sender, RoutedEventArgs e)
         {
-            registerPanel.Show();
+            _questionsPanel.Show();
 
             ResumePanelLocation();
 
@@ -147,18 +146,15 @@ namespace proiect_ii.Panels
             LinkObjectToDb();
         }
 
-
-        //in cazul apasarii butonului de intoarcere,
-        //fereastra anterioara sa fie pe aceeasi pozitie cu cea curenta
         private void ResumePanelLocation()
         {
-            registerPanel.Left = this.Left;
-            registerPanel.Top = this.Top;
+            _questionsPanel.Left = this.Left;
+            _questionsPanel.Top = this.Top;
         }
 
         private void LinkObjectToDb()
         {
-            accountController.AddToDatabase(newAccount);
+            accountController.AddToDatabase(_newAccount);
         }
 
         private void initLabels()
