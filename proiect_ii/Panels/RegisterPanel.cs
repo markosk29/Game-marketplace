@@ -58,8 +58,10 @@ namespace proiect_ii.Panels
 
         private void ExitButton(object sender, RoutedEventArgs e)
         {
+            MainWindow mainl = new MainWindow();
+            mainl.Show();
+
             this.Close();
-            Application.Current.Shutdown();
         }
 
     }

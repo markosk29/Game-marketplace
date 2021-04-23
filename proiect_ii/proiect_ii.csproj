@@ -9,7 +9,14 @@
 
   <ItemGroup>
     <None Remove="main3.png" />
+    <None Remove="main4.png" />
+    <None Remove="main_img.png" />
+    <None Remove="Panels\desgin.png" />
+    <None Remove="Panels\recover1.png" />
     <None Remove="Panels\register1.png" />
+    <None Remove="Panels\register_panel1.png" />
+    <None Remove="Panels\security1.png" />
+    <None Remove="toma formular.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,7 +25,14 @@
 
   <ItemGroup>
     <Resource Include="main3.png" />
+    <Resource Include="main4.png" />
+    <Resource Include="main_img.png" />
+    <Resource Include="Panels\desgin.png" />
+    <Resource Include="Panels\recover1.png" />
     <Resource Include="Panels\register1.png" />
+    <Resource Include="Panels\register_panel1.png" />
+    <Resource Include="Panels\security1.png" />
+    <Resource Include="toma formular.png" />
   </ItemGroup>
 
 </Project>

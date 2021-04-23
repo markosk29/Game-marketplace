@@ -17,35 +17,34 @@
         </ImageBrush>
     </Window.Background>
 
-    <Grid>
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Panels/register_panel1.png"/>
+        </Grid.Background>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Next" Click="nextButton" HorizontalAlignment="Left" Margin="700,504,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Next" Click="nextButton" HorizontalAlignment="Left" Margin="450,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
         <!--*Casuta nume de utilizator*-->
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,199,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
-        <Label x:Name="usernameLabel" Content="Username:" HorizontalAlignment="Left" Margin="307,207,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox Name="usernameTextbox" HorizontalAlignment="Left" Margin="463,215,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="362" MaxLength="12" MaxLines="1"/>
+        <Label x:Name="usernameLabel" Content="username:" HorizontalAlignment="Left" Margin="374,154,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <TextBox Name="usernameTextbox" HorizontalAlignment="Center" Margin="0,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White"/>
 
         <!--*Casuta parola*-->
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,275,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
-        <Label x:Name="passwordLabel" Content="Password:" HorizontalAlignment="Left" Margin="310,282,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <PasswordBox Name="passwordBox" HorizontalAlignment="Left" Margin="463,290,0,0" VerticalAlignment="Top" Width="362"/>
+        <Label x:Name="passwordLabel" Content="password:" HorizontalAlignment="Left" Margin="374,234,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <PasswordBox Name="passwordBox" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" Background="White" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
 
         <!--*Casuta confirmare parola*-->
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,349,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
-        <Label x:Name="confirmPassLabel" Content="Confirm password:" HorizontalAlignment="Left" Margin="282,357,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <PasswordBox Name="confirmPassBox" HorizontalAlignment="Left" Margin="463,365,0,0" VerticalAlignment="Top" Width="362"/>
+        <Label x:Name="confirmPassLabel" Content="confirm password:" HorizontalAlignment="Left" Margin="374,314,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <PasswordBox Name="confirmPassBox" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" Background="White" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
 
         <!--*Casuta nume de utilizator*-->
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="450,424,0,0" Stroke="Black" VerticalAlignment="Top" Width="400"/>
-        <Label x:Name="emailLabel" Content="E-mail:" HorizontalAlignment="Left" Margin="319,432,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox Name="emailTextbox" HorizontalAlignment="Left" Margin="463,440,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="362" MaxLength="32" MaxLines="1"/>
+        <Label x:Name="emailLabel" Content="e-mail:" HorizontalAlignment="Left" Margin="375,394,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <TextBox Name="emailTextbox" HorizontalAlignment="Center" Margin="0,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" MaxLines="1"/>
 
         <!--*Mesaje de eroare*-->
-        <Label x:Name="errorLabel" Content="" HorizontalAlignment="Center" Margin="0,200,-450,0" VerticalAlignment="Top" FontSize="16" Foreground="Red"/>
+        <Label x:Name="errorLabel" Content="" HorizontalAlignment="Left" Margin="742,190,0,0" VerticalAlignment="Top" FontSize="16" Foreground="Red"/>
         <!--*Butonul de exit*-->
-        
-        <Button Content="Exit" Click="ExitButton" HorizontalAlignment="Left" Margin="450,504,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
+
+        <Button Content="Back" Click="ExitButton" HorizontalAlignment="Left" Margin="450,546,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
 
 
