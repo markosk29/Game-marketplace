@@ -130,7 +130,7 @@ namespace proiect_ii.Panels
             confirmPasswordChange.Visibility = Visibility.Hidden;
 
             succesMessageLabel.Visibility = Visibility.Visible;
-            returnToLoginButton.Visibility = Visibility.Visible;
+            
         }
 
         private void ThrowError(int id)
