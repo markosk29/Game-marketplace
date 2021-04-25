@@ -10,6 +10,12 @@
     <Compile Update="Panels\NewGamePanel.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Panels\Pages\ShopPanel_Library.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Panels\Pages\ShopPanel_Shop.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Panels\QuestionsPanel.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -17,6 +23,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Panels\RegisterPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Panels\ShopPanel.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Panels\SuggestionsPanel.cs">
@@ -30,6 +39,12 @@
     <Page Update="Panels\NewGamePanel.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Panels\Pages\ShopPanel_Library.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Panels\Pages\ShopPanel_Shop.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Panels\QuestionsPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -37,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Panels\RegisterPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Panels\ShopPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Panels\SuggestionsPanel.xaml">

@@ -53,6 +53,11 @@ namespace proiect_ii
                         usernameBox.BorderBrush = new SolidColorBrush(prevColor);
 
                         recoverButton.Visibility = Visibility.Hidden;
+
+                        ShopPanel newShopPanel = new ShopPanel(user);
+                        newShopPanel.Show();
+
+                        this.Close();
                     }
                     else
                     {
@@ -75,10 +80,10 @@ namespace proiect_ii
             recoverPanel.Show();
         }
 
-        private void NewGameButton(object sender, RoutedEventArgs e)
+        private void ShopButton(object sender, RoutedEventArgs e)
         {
-            NewGamePanel newGamePanel = new NewGamePanel();
-            newGamePanel.Show();
+            ShopPanel newShopPanel = new ShopPanel();
+            newShopPanel.Show();
 
             this.Close();
         }

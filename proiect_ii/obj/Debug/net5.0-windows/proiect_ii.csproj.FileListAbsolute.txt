@@ -156,3 +156,9 @@ D:\POLI AN 3\SEM2\II Proiect\Proiect II\proiect_ii\obj\Debug\net5.0-windows\proi
 D:\POLI AN 3\SEM2\II Proiect\Proiect II\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
 D:\POLI AN 3\SEM2\II Proiect\Proiect II\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
 D:\POLI AN 3\SEM2\II Proiect\Proiect II\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\ShopPanel.g.cs
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\ShopPanel.baml
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Library.g.cs
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Shop.g.cs
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Shop.baml
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Library.baml

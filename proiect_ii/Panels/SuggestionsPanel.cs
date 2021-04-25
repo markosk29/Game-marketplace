@@ -116,8 +116,6 @@ namespace proiect_ii.Panels
             secondCategories = gameController.ReadFromDatabase("category2");
             thirdCategories = gameController.ReadFromDatabase("category3");
 
-            initLabels();
-
             foreach(Label label in labels)
             {
                 if (string.IsNullOrWhiteSpace(label.Content.ToString()))
@@ -144,6 +142,11 @@ namespace proiect_ii.Panels
         private void NextButton(Object sender, RoutedEventArgs e)
         { 
             LinkObjectToDb();
+
+            ShopPanel shopPanel = new ShopPanel(_newAccount);
+            shopPanel.Show();
+
+            this.Close();
         }
 
         private void ResumePanelLocation()
@@ -155,6 +158,7 @@ namespace proiect_ii.Panels
         private void LinkObjectToDb()
         {
             accountController.AddToDatabase(_newAccount);
+
         }
 
         private void initLabels()

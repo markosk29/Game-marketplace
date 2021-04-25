@@ -96,7 +96,7 @@
         <!--*linii delimitare jocuri sugerate*-->
         <Rectangle HorizontalAlignment="Left" Height="282" Margin="453,114,0,0" Stroke="Black" VerticalAlignment="Top" Width="2"/>
         <Rectangle HorizontalAlignment="Left" Height="2" Margin="616,450,0,0" Stroke="Black" VerticalAlignment="Top" Width="504"/>
-        <Label Name="testLabel1" Content=" " HorizontalAlignment="Left" Margin="544,112,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="testLabel1" Content=" " HorizontalAlignment="Left" Margin="544,112,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="testLabel2" Content=" " HorizontalAlignment="Left" Margin="544,154,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="testLabel3" Content=" " HorizontalAlignment="Left" Margin="544,198,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="testLabel4" Content=" " HorizontalAlignment="Left" Margin="544,251,0,0" VerticalAlignment="Top" FontSize="20"/>

@@ -181,7 +181,7 @@ namespace proiect_ii.Panels {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/proiect_ii;V1.0.0.0;component/panels/recoverpanel.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/proiect_ii;component/panels/recoverpanel.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Panels\RecoverPanel.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

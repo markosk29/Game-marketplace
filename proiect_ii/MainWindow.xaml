@@ -39,7 +39,7 @@
         <Button Content="LOGIN" Click="LoginUser" HorizontalAlignment="Left" Margin="13,427,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
 
         <!--Aici ma gandesc sa facem o lista scurta, mai discutam despre asta-->
-        <Button Content="CONTINUE AS GUEST" Click="NewGameButton" HorizontalAlignment="Left" Margin="13,577,0,0"  VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
+        <Button Content="CONTINUE AS GUEST" Click="ShopButton" HorizontalAlignment="Left" Margin="13,577,0,0"  VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
 
 
         <!--*Butonul de exit*-->
