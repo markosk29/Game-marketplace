@@ -41,8 +41,10 @@ namespace proiect_ii.Database.Account
             {
                 conn.Open();
 
-                using (var command = new NpgsqlCommand("SELECT * FROM accounts WHERE '" +username+ "' ~ username", conn))
+                using (var command = new NpgsqlCommand("SELECT * FROM accounts WHERE username = @username", conn))
                 {
+                    command.Parameters.AddWithValue("username", username);
+
                     var reader = command.ExecuteReader();
 
                     while (reader.Read())
@@ -73,8 +75,10 @@ namespace proiect_ii.Database.Account
             {
                 conn.Open();
 
-                using (var command = new NpgsqlCommand("SELECT * FROM accounts WHERE '" + email + "' ~ email", conn))
+                using (var command = new NpgsqlCommand("SELECT * FROM accounts WHERE email = @email", conn))
                 {
+                    command.Parameters.AddWithValue("email", email);
+
                     var reader = command.ExecuteReader();
 
                     while (reader.Read())

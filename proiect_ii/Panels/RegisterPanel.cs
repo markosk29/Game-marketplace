@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using proiect_ii.Database.Account;
 
 
@@ -11,11 +12,18 @@ namespace proiect_ii.Panels
     /// </summary>
     public partial class RegisterPanel : Window
     {
+        public static readonly RoutedEvent SendNotificationEvent = EventManager.RegisterRoutedEvent(
+            "SendNotification", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(RegisterPanel));
+
+        private bool animCompleted;
+
         Account _newAccount;
 
         public RegisterPanel()
         {
             InitializeComponent();
+
+            animCompleted = true;
 
             this._newAccount = new Account();
         }
@@ -28,7 +36,7 @@ namespace proiect_ii.Panels
                 || String.IsNullOrEmpty(passwordBox.Password)
                 || String.IsNullOrEmpty(emailTextbox.Text))
             {
-                SendError("One or more fields are empty!");
+                CreateNotification("One or more fields are empty!", "warning");
             }
             else
             {
@@ -45,15 +53,9 @@ namespace proiect_ii.Panels
                 }
                 else
                 {
-                    SendError("Passwords must match!");
+                    CreateNotification("Passwords must match!", "warning");
                 }
             }
-        }
-
-        private void SendError(String errorMessage)
-        {
-            Label label = this.FindName("errorLabel") as Label;
-            label.Content = errorMessage;
         }
 
         private void ExitButton(object sender, RoutedEventArgs e)
@@ -64,5 +66,29 @@ namespace proiect_ii.Panels
             this.Close();
         }
 
+        private void CreateNotification(string message, string type)
+        {
+            if (animCompleted)
+            {
+                animCompleted = false;
+
+                NotificationLabel.Content = message;
+                NotificationImage.Source = new BitmapImage(new Uri("../images/" + type + ".png", UriKind.Relative));
+
+                RoutedEventArgs newEventArgs = new RoutedEventArgs(SendNotificationEvent);
+                Notification.RaiseEvent(newEventArgs);
+            }
+        }
+
+        public event RoutedEventHandler SendNotification
+        {
+            add { AddHandler(SendNotificationEvent, value); }
+            remove { RemoveHandler(SendNotificationEvent, value); }
+        }
+
+        private void NotificationAnimCompleted(object? sender, EventArgs e)
+        {
+            animCompleted = true;
+        }
     }
 }

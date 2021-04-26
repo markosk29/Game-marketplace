@@ -18,7 +18,7 @@
         <!--*comun*-->
 
         <!--*buton inapoi catre panoul principal*-->
-        <Button Content="Return" Click="Return" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black"
+        <Button Name="ReturnButton" Content="Return" Click="Return" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black"
                 BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White" />
 
         <!--*buton confirmare email*-->
@@ -107,14 +107,29 @@
 
 
 
-        <!--*Inapoi la meniul principal*-->
-        <Label x:Name="succesMessageLabel" Content="Password succesfully updated! Now press Return button. " HorizontalAlignment="Center" Margin="0,213,0,0" 
-               VerticalAlignment="Top" Height="46" Width="632" FontSize="25" Visibility="Hidden"/>
-
-
-
-
         <!--*PAGINA 3*-->
 
+        <!--*Notificare*-->
+        <Grid x:Name="Notification" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 545, -485, 0">
+            <Rectangle Height="82" Stroke="Black" Width="481" Fill="Black" Opacity="0.5"/>
+            <Rectangle Height="70" Stroke="OrangeRed" Width="3" Fill="OrangeRed" Opacity="0.5" Margin="-300, 0, 0, 0"/>
+            <Label x:Name="NotificationLabel" Content="" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="OrangeRed"/>
+            <Image x:Name="NotificationImage" Height="50" Margin="-390,0,0,0" Width="50"/>
+
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="MovementX" X="0"/>
+            </Grid.RenderTransform>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="local:RecoverPanel.SendNotification">
+                    <BeginStoryboard>
+                        <Storyboard Completed="NotificationAnimCompleted">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementX" Storyboard.TargetProperty="X" AutoReverse="True" Duration="0:0:3">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-483" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+        </Grid>
     </Grid>
 </Window>

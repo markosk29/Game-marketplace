@@ -22,7 +22,7 @@
             <ImageBrush ImageSource="/Panels/register_panel1.png"/>
         </Grid.Background>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Next" Click="nextButton" HorizontalAlignment="Left" Margin="450,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
+        <Button Content="Next" Click="nextButton" HorizontalAlignment="Left" Margin="620,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
         <!--*Casuta nume de utilizator*-->
         <Label x:Name="usernameLabel" Content="username:" HorizontalAlignment="Left" Margin="374,132,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
@@ -44,9 +44,29 @@
         <Label x:Name="errorLabel" Content="" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" FontSize="25" Foreground="Red" Width="450" FontWeight="Normal"/>
         <!--*Butonul de exit*-->
 
-        <Button Content="Back" Click="ExitButton" HorizontalAlignment="Left" Margin="450,546,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
+        <Button Content="Back" Click="ExitButton" HorizontalAlignment="Left" Margin="310,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
+        <!--*Notificare*-->
+        <Grid x:Name="Notification" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 545, -485, 0">
+            <Rectangle Height="82" Stroke="Black" Width="481" Fill="Black" Opacity="0.5"/>
+            <Rectangle Height="70" Stroke="OrangeRed" Width="3" Fill="OrangeRed" Opacity="0.5" Margin="-300, 0, 0, 0"/>
+            <Label x:Name="NotificationLabel" Content="" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="OrangeRed"/>
+            <Image x:Name="NotificationImage" Height="50" Margin="-390,0,0,0" Width="50"/>
 
-
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="MovementX" X="0"/>
+            </Grid.RenderTransform>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="local:RegisterPanel.SendNotification">
+                    <BeginStoryboard>
+                        <Storyboard Completed="NotificationAnimCompleted">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementX" Storyboard.TargetProperty="X" AutoReverse="True" Duration="0:0:3">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-483" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+        </Grid>
     </Grid>
 </Window>

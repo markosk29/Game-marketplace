@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media.Imaging;
 using proiect_ii.Database.Account;
 
 namespace proiect_ii.Panels
@@ -9,6 +10,11 @@ namespace proiect_ii.Panels
     /// </summary>
     public partial class RecoverPanel : Window
     {
+
+        public static readonly RoutedEvent SendNotificationEvent = EventManager.RegisterRoutedEvent(
+            "SendNotification", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(RecoverPanel));
+
+        private bool animCompleted;
 
         private MainWindow _mainWindow;
         private AccountController _accountController;
@@ -22,6 +28,8 @@ namespace proiect_ii.Panels
 
             this._accountController = new AccountController();
 
+            animCompleted = true;
+
             errorLabel.Content = "";
         }
 
@@ -32,6 +40,7 @@ namespace proiect_ii.Panels
             _mainWindow.Show();
         }
 
+        //de facut verificare mai stricta!
         public void VerifyEmail(object sender, RoutedEventArgs e)
         {
             _userAccount = _accountController.GetAccountByEmail(emailBox.Text);
@@ -114,7 +123,7 @@ namespace proiect_ii.Panels
 
         private void ChangePassword()
         {
-            welcomeLabel.Content = "Welcome, " + _userAccount.username + "!";
+            welcomeLabel.Content = "Welcome, " +_userAccount.username + "!";
 
             welcomeLabel.Visibility = Visibility.Visible;
             changePasswordLabel.Visibility = Visibility.Visible;
@@ -129,7 +138,13 @@ namespace proiect_ii.Panels
             passwordBox.Visibility = Visibility.Hidden;
             confirmPasswordChange.Visibility = Visibility.Hidden;
 
-            succesMessageLabel.Visibility = Visibility.Visible;
+            ReturnButton.Margin = new Thickness(
+                ReturnButton.Margin.Left,
+                ReturnButton.Margin.Top - 220,
+                ReturnButton.Margin.Right,
+                ReturnButton.Margin.Bottom);
+
+            CreateNotification("Password successfully updated!", "success");
             
         }
 
@@ -138,15 +153,40 @@ namespace proiect_ii.Panels
             switch (id)
             {
                 case 1:
-                    errorLabel.Content = "There is no account with this e-mail adress!";
+                    CreateNotification("Invalid e-mail address!", "warning");
                     break;
                 case 2:
-                    errorLabel.Content = "One or more answers are incorrect!";
+                    CreateNotification("One or more answers are incorrect!", "warning");
                     break;
                 case 3:
-                    errorLabel.Content = "Please enter a valid password!";
+                    CreateNotification("Please enter a valid password!", "warning");
                     break;
             }
+        }
+
+        private void CreateNotification(string message, string type)
+        {
+            if (animCompleted)
+            {
+                animCompleted = false;
+
+                NotificationLabel.Content = message;
+                NotificationImage.Source = new BitmapImage(new Uri("../images/" +type+ ".png", UriKind.Relative));
+
+                RoutedEventArgs newEventArgs = new RoutedEventArgs(SendNotificationEvent);
+                Notification.RaiseEvent(newEventArgs);
+            }
+        }
+
+        public event RoutedEventHandler SendNotification
+        {
+            add { AddHandler(SendNotificationEvent, value); }
+            remove { RemoveHandler(SendNotificationEvent, value); }
+        }
+
+        private void NotificationAnimCompleted(object? sender, EventArgs e)
+        {
+            animCompleted = true;
         }
     }
 }
