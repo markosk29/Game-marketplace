@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\POLI AN 3\SEM2\II Proiect\Proiect II\proiect_ii\obj\Release\net5.0-windows\
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\temporar\proiect_ii\obj\Release\net5.0-windows\
 proiect_ii
 none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
-D:\POLI AN 3\SEM2\II Proiect\Proiect II\proiect_ii\App.xaml
-6-1819290318
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\temporar\proiect_ii\App.xaml
+10883787023
 
-12-1287339029
-1941071807909
-MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\QuestionsPanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\SuggestionsPanel.xaml;
+161137156634
+194673905864
+MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\Pages\ShopPanel_Library.xaml;Panels\Pages\ShopPanel_Profile.xaml;Panels\Pages\ShopPanel_Shop.xaml;Panels\QuestionsPanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\ShopPanel.xaml;Panels\SuggestionsPanel.xaml;
 
 True
 

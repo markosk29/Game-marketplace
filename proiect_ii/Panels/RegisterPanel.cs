@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -19,6 +20,8 @@ namespace proiect_ii.Panels
 
         Account _newAccount;
 
+        Utilities util;
+
         public RegisterPanel()
         {
             InitializeComponent();
@@ -26,6 +29,8 @@ namespace proiect_ii.Panels
             animCompleted = true;
 
             this._newAccount = new Account();
+
+            this.util = new Utilities();
         }
 
         private void nextButton(object sender, RoutedEventArgs e)
@@ -37,6 +42,14 @@ namespace proiect_ii.Panels
                 || String.IsNullOrEmpty(emailTextbox.Text))
             {
                 CreateNotification("One or more fields are empty!", "warning");
+            }
+            else if (!util.IsValidEmail(emailTextbox.Text))
+            {
+                CreateNotification("Invalid Email!", "warning");
+            }
+            else if (!util.StrongPass(emailTextbox.Text))
+            {
+                CreateNotification("Weak PassWord!", "warning");
             }
             else
             {
@@ -89,6 +102,40 @@ namespace proiect_ii.Panels
         private void NotificationAnimCompleted(object? sender, EventArgs e)
         {
             animCompleted = true;
+        }
+
+        /* nu am putut decat daca toate clasele din folder-ul DataBase sunt publice
+         * Compiler Error CS0050
+        public Account GetAccount()
+        {
+             return _newAccount;
+        }
+        */
+    }
+    public class Utilities
+    {
+        public bool IsValidEmail(string email)
+        {
+            if (!email.Contains("@") || !email.Contains("."))
+                return false;
+            if (email.StartsWith("[0 - 9]"))
+                return false;
+            return true;
+        }
+        public bool StrongPass(string pass)
+        {
+            int ct = 0;
+            if (pass.Any(c => char.IsLower(c)))
+                ct++;
+            if (pass.Any(c => char.IsUpper(c)))
+                ct++;
+            if (pass.Any(c => char.IsDigit(c)))
+                ct++;
+            if (pass.IndexOfAny("\\|£$%./?\"^&*+-=[]()@#~<>¬¦`!_{};:', ".ToCharArray()) >= 0)
+                ct++;
+            if (ct == 4)
+                return true;
+            return false;
         }
     }
 }

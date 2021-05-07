@@ -2,7 +2,7 @@
 
 namespace proiect_ii.Database.Game
 {
-    class Game
+    public class Game
     {
         public String name { get; set; }
 

@@ -4,7 +4,7 @@ using Npgsql;
 namespace proiect_ii.Database.Account
 {
 
-    class AccountController : DBController
+    public class AccountController : DBController
     {
         public void AddToDatabase(Account account)
         {
@@ -112,6 +112,21 @@ namespace proiect_ii.Database.Account
                     command.Parameters.AddWithValue("password", account.password);
                     command.Parameters.AddWithValue("email", account.email);
 
+                    command.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+        }
+
+        public void DeleteAccount(Account account)
+        {
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("DELETE FROM accounts WHERE '" + account.username + "' ~ username", conn))
+                {
                     command.ExecuteNonQuery();
                 }
 
