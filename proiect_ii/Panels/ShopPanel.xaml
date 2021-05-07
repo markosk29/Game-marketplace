@@ -18,7 +18,7 @@
         <Button Name="StoreLibraryButton" Content="LIBRARY" Click="ShowLibraryPage" HorizontalAlignment="Center" Margin="0,49,300,0" VerticalAlignment="Bottom" Height="60" Width="300" 
                 FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
-        <Button Content=" " HorizontalAlignment="Center" Margin="0,49,-300,0" VerticalAlignment="Bottom" Height="60" Width="300" 
+        <Button Name="StoreProfileButton" Content="PROFILE" Click="ShowProfilePage" HorizontalAlignment="Center" Margin="0,49,-300,0" VerticalAlignment="Bottom" Height="60" Width="300" 
                 FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
         <Button Content=" " HorizontalAlignment="Center" Margin="0,49,-900,0" VerticalAlignment="Bottom" Height="60" Width="300" 

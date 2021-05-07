@@ -13,6 +13,9 @@
     <Compile Update="Panels\Pages\ShopPanel_Library.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Panels\Pages\ShopPanel_Profile.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Panels\Pages\ShopPanel_Shop.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Panels\Pages\ShopPanel_Library.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Panels\Pages\ShopPanel_Profile.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Panels\Pages\ShopPanel_Shop.xaml">

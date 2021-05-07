@@ -9,7 +9,13 @@
       Title="ShopPanel_Shop">
 
     <Grid>
-        <Label Content="Store - test " FontSize="100" HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" Height="151" Width="608"/>
+        <Label Content="Store - test " FontSize="100" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top" Height="151" Width="608"/>
+        <Rectangle HorizontalAlignment="Center" Height="200" Margin="0,130,0,0" Stroke="Black" VerticalAlignment="Top" Width="952" StrokeThickness="2"/>
+        <Label Content="Suggested games" HorizontalAlignment="Left" Margin="204,82,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Image Source="../../images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="238,161,0,0" VerticalAlignment="Top" Width="129"/>
+        <Image Source="/images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="480,161,0,0" VerticalAlignment="Top" Width="129"/>
+        <Image Source="/images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="728,161,0,0" VerticalAlignment="Top" Width="129"/>
+        <Image Source="/images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="984,161,0,0" VerticalAlignment="Top" Width="129"/>
 
     </Grid>
 </Page>

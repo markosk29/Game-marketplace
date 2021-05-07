@@ -17,6 +17,8 @@ namespace proiect_ii.Panels
 
         private bool animCompleted;
 
+        private Account _user;
+
         public ShopPanel()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace proiect_ii.Panels
             navigationService.Navigate(new ShopPanel_Shop());
             StoreLibraryButton.IsEnabled = false;
             StoreLibraryButton.Content = " ";
+            StoreProfileButton.IsEnabled = false;
+            StoreProfileButton.Content = " ";
 
             registerButton.Visibility = Visibility.Visible;
 
@@ -42,6 +46,8 @@ namespace proiect_ii.Panels
             animCompleted = true;
 
             CreateNotification( "Welcome, " + account.username + "!");
+
+            this._user = account;
         }
 
         public void ShowStorePage(object sender, RoutedEventArgs e)
@@ -52,6 +58,11 @@ namespace proiect_ii.Panels
         public void ShowLibraryPage(object sender, RoutedEventArgs e)
         {
             this.navigationService.Navigate(new ShopPanel_Library(), UriKind.Relative);
+        }
+
+        public void ShowProfilePage(object sender, RoutedEventArgs e)
+        {
+            this.navigationService.Navigate(new ShopPanel_Profile(_user), UriKind.Relative);
         }
 
         public void RegisterNewUser(object sender, RoutedEventArgs e)

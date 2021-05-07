@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\default_gamepic.png" />
+    <None Remove="images\default_profilepic.png" />
+    <None Remove="images\edit.png" />
     <None Remove="images\success.png" />
     <None Remove="images\warning.png" />
     <None Remove="main3.png" />
@@ -26,6 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\default_gamepic.png" />
+    <Resource Include="images\default_profilepic.png" />
+    <Resource Include="images\edit.png" />
     <Resource Include="images\success.png" />
     <Resource Include="images\warning.png" />
     <Resource Include="main3.png" />

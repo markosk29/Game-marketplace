@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\VS projects\proiect_ii\proiect_ii\App.xaml
-9981595192
+10883787023
 
-171382186735
+18592897296
 194549852929
-MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\Pages\ShopPanel_Library.xaml;Panels\Pages\ShopPanel_Shop.xaml;Panels\QuestionsPanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\ShopPanel.xaml;Panels\SuggestionsPanel.xaml;
+MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\Pages\ShopPanel_Library.xaml;Panels\Pages\ShopPanel_Profile.xaml;Panels\Pages\ShopPanel_Shop.xaml;Panels\QuestionsPanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\ShopPanel.xaml;Panels\SuggestionsPanel.xaml;
 
-False
+True
 

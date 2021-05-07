@@ -162,3 +162,5 @@ D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopP
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Shop.g.cs
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Shop.baml
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Library.baml
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Profile.g.cs
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Profile.baml
