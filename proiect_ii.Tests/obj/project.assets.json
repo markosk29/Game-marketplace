@@ -5016,11 +5016,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\temporar\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
+      "projectUniqueName": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\proiect_ii\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
       "projectName": "proiect_ii.Tests",
-      "projectPath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\temporar\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
+      "projectPath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\proiect_ii\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
       "packagesPath": "C:\\Users\\Mindstorm_156\\.nuget\\packages\\",
-      "outputPath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\temporar\\proiect_ii.Tests\\obj\\",
+      "outputPath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\proiect_ii\\proiect_ii.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5042,8 +5042,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\temporar\\proiect_ii\\proiect_ii.csproj": {
-              "projectPath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\temporar\\proiect_ii\\proiect_ii.csproj"
+            "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\proiect_ii\\proiect_ii\\proiect_ii.csproj": {
+              "projectPath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\proiect_ii\\proiect_ii\\proiect_ii.csproj"
             }
           }
         }

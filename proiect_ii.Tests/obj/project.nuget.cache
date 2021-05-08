@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bOCZj1430PHmAMbRGZBKFyDv5wY/EvglffeNcu2xT/197j3rSc3/2qniUTY8veqwxosBZKPZKTyWy2sTb7yrwA==",
+  "dgSpecHash": "BNcpm5CoBq3YvfvbbKkUfRBRghRH3jy0/RrpJwGEirBZsdZoCHL25I+evE2dzlBViYchn9BjLfzp7QbazV2nlQ==",
   "success": true,
-  "projectFilePath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\temporar\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
+  "projectFilePath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\proiect_ii\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mindstorm_156\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\Mindstorm_156\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

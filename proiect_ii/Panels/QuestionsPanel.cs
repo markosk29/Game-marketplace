@@ -133,7 +133,7 @@ namespace proiect_ii.Panels
             remove { RemoveHandler(SendNotificationEvent, value); }
         }
 
-        private void NotificationAnimCompleted(object? sender, EventArgs e)
+        private void NotificationAnimCompleted(object sender, EventArgs e)
         {
             animCompleted = true;
         }

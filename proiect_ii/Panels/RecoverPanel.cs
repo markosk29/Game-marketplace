@@ -19,6 +19,7 @@ namespace proiect_ii.Panels
         private MainWindow _mainWindow;
         private AccountController _accountController;
         private Account _userAccount;
+        Utilities utils;
 
         public RecoverPanel(MainWindow mainWindow)
         {
@@ -31,6 +32,8 @@ namespace proiect_ii.Panels
             animCompleted = true;
 
             errorLabel.Content = "";
+
+            this.utils = new Utilities();
         }
 
         public void Return(object sender, RoutedEventArgs e)
@@ -40,7 +43,7 @@ namespace proiect_ii.Panels
             _mainWindow.Show();
         }
 
-        //de facut verificare mai stricta!
+        //de facut verificare mai stricta! -> Rezolvat in Inregisrare
         public void VerifyEmail(object sender, RoutedEventArgs e)
         {
             _userAccount = _accountController.GetAccountByEmail(emailBox.Text);
@@ -97,7 +100,8 @@ namespace proiect_ii.Panels
         public void ConfirmPasswordChange(object sender, RoutedEventArgs e)
         {
             if (!String.IsNullOrEmpty(passwordBox.Password) &&
-                !String.IsNullOrWhiteSpace(passwordBox.Password))
+                !String.IsNullOrWhiteSpace(passwordBox.Password) &&
+                utils.StrongPass(passwordBox.Password))
             {
                 _userAccount.password = passwordBox.Password;
 
@@ -184,7 +188,7 @@ namespace proiect_ii.Panels
             remove { RemoveHandler(SendNotificationEvent, value); }
         }
 
-        private void NotificationAnimCompleted(object? sender, EventArgs e)
+        private void NotificationAnimCompleted(object sender, EventArgs e)
         {
             animCompleted = true;
         }

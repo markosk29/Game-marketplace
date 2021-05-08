@@ -1,11 +1,14 @@
-﻿using System.Windows.Documents;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Documents;
 using Npgsql;
 
 namespace proiect_ii.Database.Account
 {
-
     public class AccountController : DBController
     {
+        private List<string> databaseOutput;
+
         public void AddToDatabase(Account account)
         {
             using (var conn = new NpgsqlConnection(GetConnectionString()))
@@ -119,6 +122,28 @@ namespace proiect_ii.Database.Account
             }
         }
 
+        public List<string> ReadFromDatabaseAccounts(string column)
+        {
+            // trebuie sa-l declar local nu-mi merge ca la GameController fara
+            databaseOutput = new List<string> {};
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("SELECT " + column + " FROM accounts", conn))
+                {
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        databaseOutput.Add(reader.GetString(0));
+                    }
+                }
+
+                conn.Close();
+            }
+
+            return databaseOutput;
+        }
         public void DeleteAccount(Account account)
         {
             using (var conn = new NpgsqlConnection(GetConnectionString()))

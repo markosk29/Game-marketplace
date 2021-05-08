@@ -44,7 +44,7 @@ namespace proiect_ii.Database.Game
             }
         }
 
-        public List<string> ReadFromDatabase(string column)
+        public List<string> ReadFromDatabaseGames(string column)
         {
             using (var conn = new NpgsqlConnection(GetConnectionString()))
             {
@@ -55,7 +55,7 @@ namespace proiect_ii.Database.Game
                     var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        databaseOutput.Add(reader.GetString(0));
+                        databaseOutput.Add(reader.GetString(3));
                     }
                 }
 

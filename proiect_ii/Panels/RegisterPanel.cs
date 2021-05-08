@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,7 +20,7 @@ namespace proiect_ii.Panels
         private bool animCompleted;
 
         Account _newAccount;
-
+        
         Utilities util;
 
         public RegisterPanel()
@@ -47,7 +48,7 @@ namespace proiect_ii.Panels
             {
                 CreateNotification("Invalid Email!", "warning");
             }
-            else if (!util.StrongPass(emailTextbox.Text))
+            else if (!util.StrongPass(passwordBox.Password))
             {
                 CreateNotification("Weak PassWord!", "warning");
             }
@@ -99,7 +100,7 @@ namespace proiect_ii.Panels
             remove { RemoveHandler(SendNotificationEvent, value); }
         }
 
-        private void NotificationAnimCompleted(object? sender, EventArgs e)
+        private void NotificationAnimCompleted(object sender, EventArgs e)
         {
             animCompleted = true;
         }
@@ -112,30 +113,5 @@ namespace proiect_ii.Panels
         }
         */
     }
-    public class Utilities
-    {
-        public bool IsValidEmail(string email)
-        {
-            if (!email.Contains("@") || !email.Contains("."))
-                return false;
-            if (email.StartsWith("[0 - 9]"))
-                return false;
-            return true;
-        }
-        public bool StrongPass(string pass)
-        {
-            int ct = 0;
-            if (pass.Any(c => char.IsLower(c)))
-                ct++;
-            if (pass.Any(c => char.IsUpper(c)))
-                ct++;
-            if (pass.Any(c => char.IsDigit(c)))
-                ct++;
-            if (pass.IndexOfAny("\\|£$%./?\"^&*+-=[]()@#~<>¬¦`!_{};:', ".ToCharArray()) >= 0)
-                ct++;
-            if (ct == 4)
-                return true;
-            return false;
-        }
-    }
+    
 }

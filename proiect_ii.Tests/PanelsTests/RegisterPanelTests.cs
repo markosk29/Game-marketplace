@@ -15,8 +15,10 @@ namespace proiect_ii.Tests.PanelsTests
         [TestCase("sdsds", false)]
         [TestCase("1111", false)]
         [TestCase("paprika@mail.com", true)]
+        [TestCase("Paprika@mail.com", true)]
         [TestCase("paprikamail.com", false)]
         [TestCase("paprika@mailcom", false)]
+        //[TestCase("MCT_XXI156@gmail.com", false)]   // trebuie sa de-a false pt ca exista in baza de date
         public void Test_IsValidEmail_ReturnBoolean(string email, bool expect)
         {
             Utilities rp = new Utilities();
@@ -29,6 +31,7 @@ namespace proiect_ii.Tests.PanelsTests
         [TestCase("ABCD", false)]
         [TestCase("PPaprika11@mail.com", true)]
         [TestCase("12345BrdBank@1**", true)]
+        [TestCase("Boru23@Vali", true)]
         [TestCase("paprikamail.com", false)]
         [TestCase("paprika@mailcom", false)]
         [TestCase("121212#$%", false)]

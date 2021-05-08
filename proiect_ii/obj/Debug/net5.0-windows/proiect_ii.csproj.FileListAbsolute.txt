@@ -206,3 +206,15 @@ D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\temporar\proiect_ii\obj\D
 D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\temporar\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
 D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\temporar\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
 D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\temporar\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Library.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Profile.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Shop.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\QuestionsPanel.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RecoverPanel.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\ShopPanel.g.cs
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Library.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Profile.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\Pages\ShopPanel_Shop.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\QuestionsPanel.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RecoverPanel.baml
+D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\ShopPanel.baml

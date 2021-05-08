@@ -111,10 +111,10 @@ namespace proiect_ii.Panels
         //priority to those games that match the most selected genres
         private void ProcessSuggestions()
         {
-            availableGames = gameController.ReadFromDatabase("name");
-            firstCategories = gameController.ReadFromDatabase("category1");
-            secondCategories = gameController.ReadFromDatabase("category2");
-            thirdCategories = gameController.ReadFromDatabase("category3");
+            availableGames = gameController.ReadFromDatabaseGames("name");
+            firstCategories = gameController.ReadFromDatabaseGames("category1");
+            secondCategories = gameController.ReadFromDatabaseGames("category2");
+            thirdCategories = gameController.ReadFromDatabaseGames("category3");
 
             foreach(Label label in labels)
             {
