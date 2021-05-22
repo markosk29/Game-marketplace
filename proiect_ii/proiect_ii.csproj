@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\app.ico" />
     <None Remove="images\default_gamepic.png" />
     <None Remove="images\default_profilepic.png" />
     <None Remove="images\edit.png" />
@@ -29,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\app.ico" />
     <Resource Include="images\default_gamepic.png" />
     <Resource Include="images\default_profilepic.png" />
     <Resource Include="images\edit.png" />
