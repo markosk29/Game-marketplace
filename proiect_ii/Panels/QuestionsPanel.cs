@@ -30,8 +30,6 @@ namespace proiect_ii.Panels
             this.Top = registerPanel.Top;
 
             animCompleted = true;
-
-            errorLabel.Content = "";
         }
 
         public void NextButton(object sender, RoutedEventArgs e)
@@ -60,8 +58,6 @@ namespace proiect_ii.Panels
 
                         SuggestionsPanel suggestionsPanel = new SuggestionsPanel(this, _newAccount);
                         suggestionsPanel.Show();
-
-                        errorLabel.Content = " ";
 
                         this.Hide();
 

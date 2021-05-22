@@ -15,7 +15,6 @@ namespace proiect_ii.Panels
             checkEmails = new AccountController();
             List<string> foundEmails = checkEmails.ReadFromDatabaseAccounts("email");
 
-
             if (!email.Contains("@") || !email.Contains("."))
                 return false;
             if (email.StartsWith("[0 - 9]"))

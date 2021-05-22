@@ -218,3 +218,4 @@ D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj
 D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\QuestionsPanel.baml
 D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\RecoverPanel.baml
 D:\Staff\UTCN\Automatica_anul_3\SEMESTRUL_2\II\Proiect\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\Panels\ShopPanel.baml
+D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\App.baml

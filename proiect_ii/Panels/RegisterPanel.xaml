@@ -22,35 +22,35 @@
             <ImageBrush ImageSource="/Panels/register_panel1.png"/>
         </Grid.Background>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Next" Click="nextButton" HorizontalAlignment="Left" Margin="620,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
+        <Button Content="Next" Click="nextButton" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="620,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
         <!--*Casuta nume de utilizator*-->
-        <Label x:Name="usernameLabel" Content="username:" HorizontalAlignment="Left" Margin="374,132,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
-        <TextBox Name="usernameTextbox" HorizontalAlignment="Center" Margin="0,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White"/>
+        <Label x:Name="usernameLabel" Content="username:" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="374,132,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <TextBox Name="usernameTextbox" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White"/>
 
         <!--*Casuta parola*-->
-        <Label x:Name="passwordLabel" Content="password:" HorizontalAlignment="Left" Margin="374,212,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
-        <PasswordBox Name="passwordBox" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" Background="White" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
+        <Label x:Name="passwordLabel" FontFamily="{StaticResource Nanotech}" Content="password:" HorizontalAlignment="Left" Margin="374,212,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <PasswordBox Name="passwordBox" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" Background="White" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
 
         <!--*Casuta confirmare parola*-->
-        <Label x:Name="confirmPassLabel" Content="confirm password:" HorizontalAlignment="Left" Margin="374,291,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
-        <PasswordBox Name="confirmPassBox" HorizontalAlignment="Center" Margin="0,328,0,0" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" Background="White" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
+        <Label x:Name="confirmPassLabel" FontFamily="{StaticResource Nanotech}" Content="confirm password:" HorizontalAlignment="Left" Margin="374,291,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <PasswordBox Name="confirmPassBox" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,328,0,0" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" Background="White" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
 
         <!--*Casuta nume de utilizator*-->
-        <Label x:Name="emailLabel" Content="e-mail:" HorizontalAlignment="Left" Margin="375,372,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
-        <TextBox Name="emailTextbox" HorizontalAlignment="Center" Margin="0,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" MaxLines="1"/>
+        <Label x:Name="emailLabel" Content="e-mail:" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="375,372,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <TextBox Name="emailTextbox" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" MaxLines="1"/>
 
         <!--*Mesaje de eroare*-->
-        <Label x:Name="errorLabel" Content="" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" FontSize="25" Foreground="Red" Width="450" FontWeight="Normal"/>
+        <Label x:Name="errorLabel" Content="" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" FontSize="25" Foreground="Red" Width="450" FontWeight="Normal"/>
         <!--*Butonul de exit*-->
 
-        <Button Content="Back" Click="ExitButton" HorizontalAlignment="Left" Margin="310,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
+        <Button Content="Back" Click="ExitButton" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="310,501,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
         <!--*Notificare*-->
         <Grid x:Name="Notification" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 545, -485, 0">
             <Rectangle Height="82" Stroke="Black" Width="481" Fill="Black" Opacity="0.5"/>
             <Rectangle Height="70" Stroke="OrangeRed" Width="3" Fill="OrangeRed" Opacity="0.5" Margin="-300, 0, 0, 0"/>
-            <Label x:Name="NotificationLabel" Content="" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="OrangeRed"/>
+            <Label x:Name="NotificationLabel" FontFamily="{StaticResource Nanotech}" Content="" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="OrangeRed"/>
             <Image x:Name="NotificationImage" Height="50" Margin="-390,0,0,0" Width="50"/>
 
             <Grid.RenderTransform>

@@ -15,16 +15,16 @@
             <ImageBrush ImageSource="/Panels/desgin.png"/>
         </Grid.Background>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Next" Click="NextButton" HorizontalAlignment="Center" Margin="0,500,-750,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Next" Click="NextButton" FontFamily="{StaticResource Nanotech}"  HorizontalAlignment="Center" Margin="0,500,-750,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
         <!--*Buton de revenire la fereastra cu inregistrare*-->
-        <Button Content="Previous" Click="PreviousButton" HorizontalAlignment="Center" Margin="0,500,-350,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Previous" Click="PreviousButton" FontFamily="{StaticResource Nanotech}"  HorizontalAlignment="Center" Margin="0,500,-350,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
         <!--*Buton confirmare selectie categorii*-->
-        <Button Name="confirmButton" Content="Confirm" Click="ConfirmSelection" HorizontalAlignment="Center" Margin="0,330,850,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button x:Name="confirmButton" Content="Confirm" Click="ConfirmSelection" FontFamily="{StaticResource Nanotech}"  HorizontalAlignment="Center" Margin="100,340,850,0" VerticalAlignment="Top" Height="40" Width="350" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
-        <!--*Casute pentru selectare genuri*-->
-        <ComboBox Name="firstComboBox" HorizontalAlignment="Left" Margin="100,138,0,0" VerticalAlignment="Top" Width="150">
+            <!--*Casute pentru selectare genuri*-->
+        <ComboBox Name="firstComboBox" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left"  Margin="55,130,0,0" VerticalAlignment="Top" Width="350" Height="30" FontSize="18" Grid.ColumnSpan="2">
             <ComboBoxItem>Horror</ComboBoxItem>
             <ComboBoxItem>Action</ComboBoxItem>
             <ComboBoxItem>Adventure</ComboBoxItem>
@@ -46,7 +46,7 @@
             <ComboBoxItem>Survival</ComboBoxItem>
         </ComboBox>
 
-        <ComboBox Name="secondComboBox" HorizontalAlignment="Left" Margin="100,198,0,0" VerticalAlignment="Top" Width="150">
+        <ComboBox Name="secondComboBox" FontFamily="{StaticResource Nanotech}"  HorizontalAlignment="Left"  Margin="55,200,0,0" VerticalAlignment="Top" Width="350" Height="30" FontSize="18" Grid.ColumnSpan="2">
             <ComboBoxItem>Horror</ComboBoxItem>
             <ComboBoxItem>Action</ComboBoxItem>
             <ComboBoxItem>Adventure</ComboBoxItem>
@@ -68,7 +68,7 @@
             <ComboBoxItem>Survival</ComboBoxItem>
         </ComboBox>
 
-        <ComboBox Name="thirdComboBox" HorizontalAlignment="Left" Margin="100,258,0,0" VerticalAlignment="Top" Width="150">
+        <ComboBox Name="thirdComboBox" FontFamily="{StaticResource Nanotech}"  HorizontalAlignment="Left" Margin="55,270,0,0" VerticalAlignment="Top" Width="350" Height="30" FontSize="18" Grid.ColumnSpan="2" >
             <ComboBoxItem>Horror</ComboBoxItem>
             <ComboBoxItem>Action</ComboBoxItem>
             <ComboBoxItem>Adventure</ComboBoxItem>
@@ -89,17 +89,25 @@
             <ComboBoxItem>PostApocalyptic</ComboBoxItem>
             <ComboBoxItem>Survival</ComboBoxItem>
         </ComboBox>
+
+        <Rectangle Name="textBg" HorizontalAlignment="Center" Opacity="0.4" Height="50" Margin="0,35,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Top" Width="600"/>
 
         <!--*text sus*-->
-        <Label Content="Select your favorite genres so we can suggest you games" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Select your favorite genres so we can suggest you games" FontFamily="{StaticResource Nanotech}" Foreground="White" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" FontSize="20" Height="38"/>
 
         <!--*linii delimitare jocuri sugerate*-->
-        <Rectangle HorizontalAlignment="Left" Height="282" Margin="453,114,0,0" Stroke="Black" VerticalAlignment="Top" Width="2"/>
-        <Rectangle HorizontalAlignment="Left" Height="2" Margin="616,450,0,0" Stroke="Black" VerticalAlignment="Top" Width="504"/>
-        <Label x:Name="testLabel1" Content=" " HorizontalAlignment="Left" Margin="544,112,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="testLabel2" Content=" " HorizontalAlignment="Left" Margin="544,154,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="testLabel3" Content=" " HorizontalAlignment="Left" Margin="544,198,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="testLabel4" Content=" " HorizontalAlignment="Left" Margin="544,251,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="testLabel5" Content=" " HorizontalAlignment="Left" Margin="544,303,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Rectangle Opacity="0.4" HorizontalAlignment="Left" Height="282" Margin="453,114,0,0" Stroke="Black" Fill="Black" VerticalAlignment="Top" Width="5"/>
+        <Rectangle Opacity="0.4" HorizontalAlignment="Left" Height="5" Margin="616,450,0,0" Stroke="Black" Fill="Black" VerticalAlignment="Top" Width="504"/>
+        <Image Name="suggestedGame1" Source="/images/default_gamepic.png" Stretch="Fill"  RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Left" Height="200" Margin="520,120,0,0" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
+        <Image Name="suggestedGame2" Source="/images/default_gamepic.png" Stretch="Fill" RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Left" Height="200" Margin="670,150,0,0" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
+        <Image Name="suggestedGame3" Source="/images/default_gamepic.png" Stretch="Fill" RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Left" Height="200" Margin="820,180,0,0" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
+        <Image Name="suggestedGame4"  Source="/images/default_gamepic.png" Stretch="Fill" RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Left" Height="200" Margin="970,210,0,0" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
+
+        <Rectangle Visibility="Hidden" Name="coverBg" HorizontalAlignment="Left" Opacity="0.85" Height="310" Margin="20,100,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Top" Width="422"/>
+        <Label Visibility="Hidden" Name="coverText" Content="Hope you enjoy the suggested games!" FontFamily="{StaticResource Nanotech}" Foreground="White" HorizontalAlignment="Left" Margin="60,170,0,0" VerticalAlignment="Top" FontSize="20" Height="38">
+            <Label.LayoutTransform>
+                <RotateTransform Angle="-20"></RotateTransform>
+            </Label.LayoutTransform>
+        </Label>
     </Grid>
 </Window>

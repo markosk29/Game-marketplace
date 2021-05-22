@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:proiect_ii"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Nanotech">pack://application:,,,/fonts/#Nanotech LLC</FontFamily>
     </Application.Resources>
 </Application>

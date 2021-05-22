@@ -31,8 +31,6 @@ namespace proiect_ii.Panels
 
             registerButton.Visibility = Visibility.Visible;
 
-            welcomeLabel.Content =
-                "Hello! You are currently viewing the store as a Guest, please register to have full access!";
         }
 
         public ShopPanel(Account account)
@@ -40,8 +38,6 @@ namespace proiect_ii.Panels
             InitializeComponent();
 
             navigationService.Navigate(new ShopPanel_Library());
-
-            welcomeLabel.Visibility = Visibility.Hidden;
 
             animCompleted = true;
 
@@ -52,7 +48,14 @@ namespace proiect_ii.Panels
 
         public void ShowStorePage(object sender, RoutedEventArgs e)
         {
-            this.navigationService.Navigate(new ShopPanel_Shop(), UriKind.Relative);
+            if (_user != null)
+            {
+                this.navigationService.Navigate(new ShopPanel_Shop(_user), UriKind.Relative);
+            }
+            else
+            {
+                this.navigationService.Navigate(new ShopPanel_Shop(), UriKind.Relative);
+            }
         }
 
         public void ShowLibraryPage(object sender, RoutedEventArgs e)

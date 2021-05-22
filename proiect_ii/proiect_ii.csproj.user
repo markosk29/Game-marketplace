@@ -67,4 +67,8 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+   <Resource Include="fonts\NanoTech Regular.otf" />
+ </ItemGroup>
+
 </Project>

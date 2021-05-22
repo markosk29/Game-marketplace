@@ -45,4 +45,16 @@
     <Resource Include="toma formular.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Panels\fonts\NanoTech Regular.otf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Update="fonts\NanoTech Regular.otf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

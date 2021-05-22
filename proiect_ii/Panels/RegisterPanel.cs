@@ -46,11 +46,11 @@ namespace proiect_ii.Panels
             }
             else if (!util.IsValidEmail(emailTextbox.Text))
             {
-                CreateNotification("Invalid Email!", "warning");
+                CreateNotification("Invalid email format!", "warning");
             }
             else if (!util.StrongPass(passwordBox.Password))
             {
-                CreateNotification("Weak PassWord!", "warning");
+                CreateNotification("Password is too weak!", "warning");
             }
             else
             {

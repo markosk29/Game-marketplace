@@ -20,12 +20,12 @@
             <ImageBrush ImageSource="/Panels/security1.png"/>
         </Grid.Background>
         <!--*Buton pentru a trece mai departe*-->
-        <Button Content="Next" Click="NextButton" HorizontalAlignment="Left" Margin="310,480,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White" Grid.Column="1"/>
+        <Button Content="Next" Click="NextButton" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="310,480,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White" Grid.Column="1"/>
         <!--*Butonul inapoi*-->
-        <Button Content="Previous" Click="PreviousButton" HorizontalAlignment="Left" Margin="188,480,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White" Grid.ColumnSpan="2"/>
+        <Button Content="Previous" FontFamily="{StaticResource Nanotech}" Click="PreviousButton" HorizontalAlignment="Left" Margin="188,480,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White" Grid.ColumnSpan="2"/>
 
         <!--*Intrebare 1*-->
-        <ComboBox Name="firstQuestion" HorizontalAlignment="Left" Margin="114,173,0,0" VerticalAlignment="Top" Width="426" Height="31" FontSize="18" Grid.ColumnSpan="2" >
+        <ComboBox Name="firstQuestion" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="114,173,0,0" VerticalAlignment="Top" Width="426" Height="31" FontSize="18" Grid.ColumnSpan="2" >
             <ComboBoxItem>What was your childhood nickname?</ComboBoxItem>
             <ComboBoxItem>What was your favorite place to visit as a child?</ComboBoxItem>
             <ComboBoxItem>What was your dream job as a child?</ComboBoxItem>
@@ -40,7 +40,7 @@
             <ComboBoxItem>In what city does your nearest sibling live?</ComboBoxItem>
         </ComboBox>
         <!--*Intrebare 2*-->
-        <ComboBox Name="secondQuestion" HorizontalAlignment="Left" Margin="114,273,0,0" VerticalAlignment="Top" Width="426" Height="31" FontSize="18" Grid.ColumnSpan="2">
+        <ComboBox Name="secondQuestion" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="114,273,0,0" VerticalAlignment="Top" Width="426" Height="31" FontSize="18" Grid.ColumnSpan="2">
             <ComboBoxItem>What was your childhood nickname?</ComboBoxItem>
             <ComboBoxItem>What was your favorite place to visit as a child?</ComboBoxItem>
             <ComboBoxItem>What was your dream job as a child?</ComboBoxItem>
@@ -55,7 +55,7 @@
             <ComboBoxItem>In what city does your nearest sibling live?</ComboBoxItem>
         </ComboBox>
         <!--*Intrebare 3*-->
-        <ComboBox Name="thirdQuestion" HorizontalAlignment="Left" Margin="114,373,0,0" VerticalAlignment="Top" Width="426" Height="31" FontSize="18" Grid.ColumnSpan="2">
+        <ComboBox Name="thirdQuestion" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="114,373,0,0" VerticalAlignment="Top" Width="426" Height="31" FontSize="18" Grid.ColumnSpan="2">
             <ComboBoxItem>What was your childhood nickname?</ComboBoxItem>
             <ComboBoxItem>What was your favorite place to visit as a child?</ComboBoxItem>
             <ComboBoxItem>What was your dream job as a child?</ComboBoxItem>
@@ -70,23 +70,22 @@
             <ComboBoxItem>In what city does your nearest sibling live?</ComboBoxItem>
         </ComboBox>
         <!--*Primul raspuns*-->
-        <TextBox Name="firstAnswer" HorizontalAlignment="Left" Margin="274,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox Name="firstAnswer" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="274,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" Grid.ColumnSpan="2" Grid.Column="1"/>
         <!--*Al doilea raspuns*-->
-        <TextBox Name="secondAnswer" HorizontalAlignment="Left" Margin="274,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox Name="secondAnswer" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="274,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" Grid.ColumnSpan="2" Grid.Column="1"/>
         <!--*Al treilea raspuns*-->
-        <TextBox Name="thirdAnswer" HorizontalAlignment="Left" Margin="274,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox Name="thirdAnswer" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="274,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White" Grid.ColumnSpan="2" Grid.Column="1"/>
 
         <!--*Labeluri*-->
-        <Label Content="First Question" HorizontalAlignment="Left" Margin="115,136,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37" FontWeight="Normal"/>
-        <Label Content="Second Question" HorizontalAlignment="Left" Margin="115,236,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
-        <Label Content="Third Question" HorizontalAlignment="Left" Margin="115,336,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
-        <Label x:Name="errorLabel" Content="Error&#xD;&#xA;" HorizontalAlignment="Left" Margin="248,430,0,0" VerticalAlignment="Top" Height="56" Width="704" FontSize="30" Foreground="Red" Grid.ColumnSpan="2"/>
+        <Label Content="First Question" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="115,136,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37" FontWeight="Normal"/>
+        <Label Content="Second Question" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="115,236,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
+        <Label Content="Third Question" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="115,336,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Height="37"/>
 
         <!--*Notificare*-->
         <Grid Grid.Column="2" x:Name="Notification" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 545, -485, 0">
             <Rectangle Height="82" Stroke="Black" Width="481" Fill="Black" Opacity="0.5"/>
             <Rectangle Height="70" Stroke="OrangeRed" Width="3" Fill="OrangeRed" Opacity="0.5" Margin="-300, 0, 0, 0"/>
-            <Label x:Name="NotificationLabel" Content="" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="OrangeRed"/>
+            <Label x:Name="NotificationLabel" Content="" FontFamily="{StaticResource Nanotech}" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="OrangeRed"/>
             <Image x:Name="NotificationImage" Height="50" Margin="-390,0,0,0" Width="50"/>
 
             <Grid.RenderTransform>

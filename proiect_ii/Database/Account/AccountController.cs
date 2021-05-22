@@ -52,6 +52,7 @@ namespace proiect_ii.Database.Account
 
                     while (reader.Read())
                     {
+                        account.id = reader.GetInt32(0);
                         account.username = reader.GetString(1);
                         account.password = reader.GetString(2);
                         account.email = reader.GetString(3);
@@ -157,6 +158,50 @@ namespace proiect_ii.Database.Account
 
                 conn.Close();
             }
+        }
+
+        public void AddFavoriteGames(int accountId, int gameId)
+        {
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("INSERT INTO FavoriteGames (account_id, game_id) VALUES(@account_id, @game_id)", conn))
+                {
+                    command.Parameters.AddWithValue("account_id", accountId);
+                    command.Parameters.AddWithValue("game_id", gameId);
+
+                    command.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+        }
+
+        public List<int> GetFavoriteGames(int accountId)
+        {
+            List<int> favoriteGameIds = new List<int>();
+
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("SELECT * FROM FavoriteGames WHERE account_id = @account_id", conn))
+                {
+                    command.Parameters.AddWithValue("account_id", accountId);
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        favoriteGameIds.Add(reader.GetInt32(1));
+                    }
+
+
+                }
+                conn.Close();
+            }
+
+            return favoriteGameIds;
         }
     }
 }

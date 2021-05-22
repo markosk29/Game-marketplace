@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4vbFSqk6Ana8/2uquFzqp/zp5S/inPgRtkZsPshND8cK+ZEYoanZpsprf4slfSrfsj3VfegQLC6CpmP8DBbQlA==",
+  "dgSpecHash": "jvneDv9RuTtumzGWyCgeewrWfrtx562ZGlVQQBFHksviw6uM4aEIi+J225n8dk4tTNo6gHgyGXi3aYzmajHGgQ==",
   "success": true,
-  "projectFilePath": "D:\\Staff\\UTCN\\Automatica_anul_3\\SEMESTRUL_2\\II\\Proiect\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
+  "projectFilePath": "D:\\VS projects\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Mindstorm_156\\.nuget\\packages\\npgsql\\5.0.3\\npgsql.5.0.3.nupkg.sha512",
-    "C:\\Users\\Mindstorm_156\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "C:\\Users\\Markos\\.nuget\\packages\\npgsql\\5.0.3\\npgsql.5.0.3.nupkg.sha512",
+    "C:\\Users\\Markos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

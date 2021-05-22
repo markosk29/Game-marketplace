@@ -4,18 +4,35 @@ namespace proiect_ii.Database.Game
 {
     public class Game
     {
-        public String name { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
 
-        public String publisher { get; set; }
+        public string publisher { get; set; }
 
-        public String developer { get; set; }
+        public string developer { get; set; }
 
-        public String description { get; set; }
+        public string description { get; set; }
 
-        public String category1 { get; set; }
+        public string category1 { get; set; }
 
-        public String category2 { get; set; }
+        public string category2 { get; set; }
 
-        public String category3 { get; set; }
+        public string category3 { get; set; }
+
+        public string main_img_link { get; set; }
+
+        public string showoff_img_link_1 { get; set; }
+
+        public string showoff_img_link_2 { get; set; }
+
+        public string showoff_img_link_3 { get; set; }
+
+        public string showoff_img_link_4 { get; set; }
+
+        public string showoff_img_link_5 { get; set; }
+
+        public string showoff_video_link_1 { get; set; }
+
+        public string showoff_video_link_2 { get; set; }
     }
 }

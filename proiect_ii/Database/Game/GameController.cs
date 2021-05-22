@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Windows.Documents;
 using Npgsql;
+using NpgsqlTypes;
 
 namespace proiect_ii.Database.Game
 {
     public class GameController : DBController
     {
 
-        private List<string> databaseOutput;
+        private List<Game> databaseOutput;
 
         public GameController()
         {
-            this.databaseOutput = new List<string>();
+            this.databaseOutput = new List<Game>();
         }
 
         public void AddToDatabase(Game game)
@@ -44,18 +45,77 @@ namespace proiect_ii.Database.Game
             }
         }
 
-        public List<string> ReadFromDatabaseGames(string column)
+        public List<Game> ReadAllGames()
         {
             using (var conn = new NpgsqlConnection(GetConnectionString()))
             {
                 conn.Open();
 
-                using (var command = new NpgsqlCommand("SELECT " + column + " FROM games", conn))
+                using (var command = new NpgsqlCommand("SELECT * FROM games", conn))
                 {
                     var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        databaseOutput.Add(reader.GetString(3));
+                        databaseOutput.Add(new Game()
+                        {
+                            id = reader.GetInt32(0),
+                            name = reader.GetString(1),
+                            publisher = reader.GetString(2),
+                            developer = reader.GetString(3),
+                            description = reader.GetString(4),
+                            category1 = reader.GetString(5),
+                            category2 = reader.GetString(6),
+                            category3 = reader.GetString(7),
+                            main_img_link = reader.GetString(8),
+                            showoff_img_link_1 = reader.GetString(9),
+                            showoff_img_link_2 = reader.GetString(10),
+                            showoff_img_link_3 = reader.GetString(11),
+                            showoff_img_link_4 = reader.GetString(12),
+                            showoff_img_link_5 = reader.GetString(13),
+                            showoff_video_link_1 = reader.GetString(14),
+                            showoff_video_link_2 = reader.GetString(15)
+                        });
+                    }
+                }
+
+                conn.Close();
+            }
+
+            return databaseOutput;
+        }
+
+        public List<Game> ReadFromDatabaseGames(string column, int selectedCategory)
+        {
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("SELECT * FROM games WHERE " +column+ "= @category", conn))
+                {
+                    command.Parameters.AddWithValue("category", selectedCategory.ToString());
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        databaseOutput.Add(new Game()
+                        {
+                            id = reader.GetInt32(0),
+                            name = reader.GetString(1),
+                            publisher = reader.GetString(2),
+                            developer = reader.GetString(3),
+                            description = reader.GetString(4),
+                            category1 = reader.GetString(5),
+                            category2 = reader.GetString(6),
+                            category3 = reader.GetString(7),
+                            main_img_link = reader.GetString(8),
+                            showoff_img_link_1 = reader.GetString(9),
+                            showoff_img_link_2 = reader.GetString(10),
+                            showoff_img_link_3 = reader.GetString(11),
+                            showoff_img_link_4 = reader.GetString(12),
+                            showoff_img_link_5 = reader.GetString(13),
+                            showoff_video_link_1 = reader.GetString(14),
+                            showoff_video_link_2 = reader.GetString(15)
+                        });
                     }
                 }
 
@@ -73,12 +133,15 @@ namespace proiect_ii.Database.Game
             {
                 conn.Open();
 
-                using (var command = new NpgsqlCommand("SELECT * FROM games WHERE '" + gameName + "' ~ name", conn))
+                using (var command = new NpgsqlCommand("SELECT * FROM games name = @name", conn))
                 {
+                    command.Parameters.AddWithValue("name", gameName);
+
                     var reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {
+                        game.id = reader.GetInt32(0);
                         game.name = reader.GetString(1);
                         game.publisher = reader.GetString(2);
                         game.developer = reader.GetString(3);
@@ -86,6 +149,55 @@ namespace proiect_ii.Database.Game
                         game.category1 = reader.GetString(5);
                         game.category2 = reader.GetString(6);
                         game.category3 = reader.GetString(7);
+                        game.main_img_link = reader.GetString(8);
+                        game.showoff_img_link_1 = reader.GetString(9);
+                        game.showoff_img_link_2 = reader.GetString(10);
+                        game.showoff_img_link_3 = reader.GetString(11);
+                        game.showoff_img_link_4 = reader.GetString(12);
+                        game.showoff_img_link_5 = reader.GetString(13);
+                        game.showoff_video_link_1 = reader.GetString(14);
+                        game.showoff_video_link_2 = reader.GetString(15);
+                    }
+                }
+
+                conn.Close();
+            }
+
+            return game;
+        }
+
+        public Game GetGameById(int id)
+        {
+            Game game = new Game();
+
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("SELECT * FROM games WHERE id = @id", conn))
+                {
+                    command.Parameters.AddWithValue("id", id);
+
+                    var reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        game.id = reader.GetInt32(0);
+                        game.name = reader.GetString(1);
+                        game.publisher = reader.GetString(2);
+                        game.developer = reader.GetString(3);
+                        game.description = reader.GetString(4);
+                        game.category1 = reader.GetString(5);
+                        game.category2 = reader.GetString(6);
+                        game.category3 = reader.GetString(7);
+                        game.main_img_link = reader.GetString(8);
+                        game.showoff_img_link_1 = reader.GetString(9);
+                        game.showoff_img_link_2 = reader.GetString(10);
+                        game.showoff_img_link_3 = reader.GetString(11);
+                        game.showoff_img_link_4 = reader.GetString(12);
+                        game.showoff_img_link_5 = reader.GetString(13);
+                        game.showoff_video_link_1 = reader.GetString(14);
+                        game.showoff_video_link_2 = reader.GetString(15);
                     }
                 }
 

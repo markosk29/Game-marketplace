@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 using proiect_ii.Database.Account;
 using proiect_ii.Database.Game;
 
@@ -45,11 +46,11 @@ namespace proiect_ii.Panels
         private GameController gameController;
 
         private List<int> selectedCategories;
-        private List<string> availableGames;
-        private List<string> firstCategories;
-        private List<string> secondCategories;
-        private List<string> thirdCategories;
-        private List<Label> labels;
+        private List<Game> firstCategories;
+        private List<Game> secondCategories;
+        private List<Game> thirdCategories;
+        private List<Image> suggestedGames;
+        private List<int> favoriteGameIds;
 
         public SuggestionsPanel(QuestionsPanel questionsPanel, Account newAccount)
         {
@@ -65,27 +66,30 @@ namespace proiect_ii.Panels
             this.gameController = new GameController();
 
             this.selectedCategories = new List<int>();
-            this.availableGames = new List<string>();
-            this.firstCategories = new List<string>();
-            this.secondCategories = new List<string>();
-            this.thirdCategories = new List<string>();
-            this.labels = new List<Label>();
+            this.suggestedGames = new List<Image>();
+            this.favoriteGameIds = new List<int>();
+
+            initSuggestedGames();
 
         }
 
         private void ConfirmSelection(Object sender, RoutedEventArgs e)
         {
-            AddToList(firstComboBox.SelectedIndex);
-            AddToList(secondComboBox.SelectedIndex);
-            AddToList(thirdComboBox.SelectedIndex);
+            if (firstComboBox.SelectedIndex > -1 &&
+                secondComboBox.SelectedIndex > -1 &&
+                thirdComboBox.SelectedIndex > -1)
+            {
+                AddToList(firstComboBox.SelectedIndex);
+                AddToList(secondComboBox.SelectedIndex);
+                AddToList(thirdComboBox.SelectedIndex);
 
-            confirmButton.IsEnabled = false;
+                confirmButton.IsEnabled = false;
 
-            firstComboBox.IsEnabled = false;
-            secondComboBox.IsEnabled = false;
-            thirdComboBox.IsEnabled = false;
-
-            ProcessSuggestions();
+                firstComboBox.IsEnabled = false;
+                secondComboBox.IsEnabled = false;
+                thirdComboBox.IsEnabled = false;
+                ProcessSuggestions();
+            }
         }
 
         private void AddToList(int index)
@@ -107,26 +111,84 @@ namespace proiect_ii.Panels
             }
         }
 
-        //implementation 1: Take selected genres in order and show games that match those genre
-        //priority to those games that match the most selected genres
         private void ProcessSuggestions()
         {
-            availableGames = gameController.ReadFromDatabaseGames("name");
-            firstCategories = gameController.ReadFromDatabaseGames("category1");
-            secondCategories = gameController.ReadFromDatabaseGames("category2");
-            thirdCategories = gameController.ReadFromDatabaseGames("category3");
+            firstCategories = gameController.ReadFromDatabaseGames("category1", selectedCategories[0]);
+            secondCategories = gameController.ReadFromDatabaseGames("category2", selectedCategories[1]);
+            thirdCategories = gameController.ReadFromDatabaseGames("category3", selectedCategories[2]);
 
-            foreach(Label label in labels)
+            var rand = new Random();
+
+            BitmapImage placeholderImage = new BitmapImage(new Uri("/images/default_gamepic.png", UriKind.Relative));
+
+            for (int i = 0; i < suggestedGames.Count; i++)
             {
-                if (string.IsNullOrWhiteSpace(label.Content.ToString()))
+                if (i < 2)
                 {
-                    foreach(string category in firstCategories)
+                    if (!suggestedGames[i].IsEnabled)
                     {
-                        
+                        suggestedGames[i].IsEnabled = true;
+
+                        try
+                        {
+                            int index = rand.Next(firstCategories.Count - 1);
+                            suggestedGames[i].Source = new BitmapImage(new Uri(firstCategories[index].main_img_link, UriKind.Absolute));
+
+                            favoriteGameIds.Add(firstCategories[index].id);
+                            firstCategories.RemoveAt(index);
+                        }
+                        catch (Exception e)
+                        {
+                            suggestedGames[i].Source = placeholderImage;
+                        }
+                    }
+                }
+
+                if (i >= 2 && i < 3)
+                {
+                    if (!suggestedGames[i].IsEnabled)
+                    {
+                        suggestedGames[i].IsEnabled = true;
+
+                        try
+                        {
+                            int index = rand.Next(secondCategories.Count - 1);
+                            suggestedGames[i].Source = new BitmapImage(new Uri(secondCategories[index].main_img_link, UriKind.Absolute));
+
+                            favoriteGameIds.Add(secondCategories[index].id);
+                            secondCategories.RemoveAt(index);
+                        }
+                        catch (Exception e)
+                        {
+                            suggestedGames[i].Source = placeholderImage;
+                        }
+                    }
+                }
+
+                if (i == 3)
+                {
+                    if (!suggestedGames[i].IsEnabled)
+                    {
+                        suggestedGames[i].IsEnabled = true;
+
+                        try
+                        {
+                            int index = rand.Next(thirdCategories.Count - 1);
+                            suggestedGames[i].Source = new BitmapImage(new Uri(thirdCategories[index].main_img_link, UriKind.Absolute));
+
+                            favoriteGameIds.Add(thirdCategories[index].id);
+                            thirdCategories.RemoveAt(index);
+                        }
+                        catch (Exception e)
+                        {
+                            suggestedGames[i].Source = placeholderImage;
+                        }
                     }
                 }
             }
 
+            coverBg.Visibility = Visibility.Visible;
+            coverText.Visibility = Visibility.Visible;
         }
 
         private void PreviousButton(Object sender, RoutedEventArgs e)
@@ -142,6 +204,8 @@ namespace proiect_ii.Panels
         private void NextButton(Object sender, RoutedEventArgs e)
         { 
             LinkObjectToDb();
+
+            AddFavoriteGamesToDb();
 
             ShopPanel shopPanel = new ShopPanel(_newAccount);
             shopPanel.Show();
@@ -161,15 +225,24 @@ namespace proiect_ii.Panels
 
         }
 
-        private void initLabels()
+        private void AddFavoriteGamesToDb()
+        {
+            Account account = accountController.GetAccountByUsername(_newAccount.username);
+
+            foreach (int gameId in favoriteGameIds)
+            {
+                accountController.AddFavoriteGames(account.id, gameId);
+            }
+        }
+
+        private void initSuggestedGames()
         {
             //temp
 
-            labels.Add(testLabel1);
-            labels.Add(testLabel2);
-            labels.Add(testLabel3);
-            labels.Add(testLabel4);
-            labels.Add(testLabel5);
+            suggestedGames.Add(suggestedGame1);
+            suggestedGames.Add(suggestedGame2);
+            suggestedGames.Add(suggestedGame3);
+            suggestedGames.Add(suggestedGame4);
         }
    
     }

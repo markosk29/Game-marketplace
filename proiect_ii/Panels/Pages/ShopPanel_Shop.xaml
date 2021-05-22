@@ -5,17 +5,154 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:proiect_ii.Panels.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="1360"
+      d:DesignHeight="2000" d:DesignWidth="1360"
       Title="ShopPanel_Shop">
 
-    <Grid>
-        <Label Content="Store - test " FontSize="100" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top" Height="151" Width="608"/>
-        <Rectangle HorizontalAlignment="Center" Height="200" Margin="0,130,0,0" Stroke="Black" VerticalAlignment="Top" Width="952" StrokeThickness="2"/>
-        <Label Content="Suggested games" HorizontalAlignment="Left" Margin="204,82,0,0" VerticalAlignment="Top" FontSize="25"/>
-        <Image Source="../../images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="238,161,0,0" VerticalAlignment="Top" Width="129"/>
-        <Image Source="/images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="480,161,0,0" VerticalAlignment="Top" Width="129"/>
-        <Image Source="/images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="728,161,0,0" VerticalAlignment="Top" Width="129"/>
-        <Image Source="/images/default_gamepic.png"  HorizontalAlignment="Left" Height="139" Margin="984,161,0,0" VerticalAlignment="Top" Width="129"/>
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <Grid Name="shopPage">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="1500"/>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Rectangle Name="suggestGamesBg" HorizontalAlignment="Center" Opacity="0.4" Height="260" Margin="0,120,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Top" Width="1310"/>
+            <Label Name="suggestGamesPromo" Content="SUGGESTED GAMES" FontFamily="{StaticResource Nanotech}" Opacity="0.7" HorizontalAlignment="Center" Foreground="White"  Margin="0,335,0,0" VerticalAlignment="Top" FontSize="25" Height="50"/>
+
+            <!--* JOC SUGERAT 1 *-->
+            <Grid>
+                <Image Name="suggestedGame1" Source="../../images/default_gamepic.png" Stretch="Fill"  RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Center" Height="250" Margin="-945,80,0,0" VerticalAlignment="Top" Width="300"></Image>
+
+                <Grid.RenderTransform>
+                    <TranslateTransform x:Name="MovementY" Y="0"/>
+                </Grid.RenderTransform>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="45" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+            </Grid>
+
+            <!--* JOC SUGERAT 2 *-->
+            <Grid>
+                <Image Name="suggestedGame2" Source="/images/default_gamepic.png" Stretch="Fill" RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Center" Height="250" Margin="-315,80,0,0" VerticalAlignment="Top" Width="300"/>
+
+                <Grid.RenderTransform>
+                    <TranslateTransform x:Name="MovementY2" Y="0"/>
+                </Grid.RenderTransform>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY2" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="45" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY2" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+            </Grid>
+
+            <!--* JOC SUGERAT 3 *-->
+            <Grid>
+                <Image Name="suggestedGame3" Source="/images/default_gamepic.png" Stretch="Fill" RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Center" Height="250" Margin="315,80,0,0" VerticalAlignment="Top" Width="300"/>
+
+                <Grid.RenderTransform>
+                    <TranslateTransform x:Name="MovementY3" Y="0"/>
+                </Grid.RenderTransform>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY3" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="45" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY3" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+            </Grid>
+
+            <!--* JOC SUGERAT 4 *-->
+            <Grid>
+                <Image Name="suggestedGame4"  Source="/images/default_gamepic.png" Stretch="Fill" RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Center" Height="250" Margin="945,80,0,0" VerticalAlignment="Top" Width="300"/>
+
+                <Grid.RenderTransform>
+                    <TranslateTransform x:Name="MovementY4" Y="0"/>
+                </Grid.RenderTransform>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY4" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="45" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementY4" Storyboard.TargetProperty="Y" Duration="0:0:0.7">
+                                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+            </Grid>
+
+            <TextBox Background="Transparent" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,29,0,0" Text="SEARCH..." TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="30" FontSize="20"/>
+            <Rectangle Name="featuredGameBg" Grid.Row="1"  HorizontalAlignment="Center" Opacity="0.4" Height="300" Margin="0,35,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Top" Width="750"/>
+            <TextBox Name="featuredGameDescription" FontFamily="{StaticResource Nanotech}" Grid.Row="1" HorizontalAlignment="Center" Margin="200,95,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Height="200" Background="Transparent" FontSize="17" Foreground="White" IsReadOnly="true" BorderThickness="0"/>
+            <Rectangle Name="featuredGameSafeguard" Grid.Row="1"  HorizontalAlignment="Center" Opacity="0" Height="200" Margin="200,95,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Top" Width="352"/>
+            <Rectangle Name="featuredGamePromo" Grid.Row="1"  HorizontalAlignment="Center" Opacity="0.7" Height="50" Margin="600,-10,0,0" Fill="GreenYellow" Stroke="GreenYellow" VerticalAlignment="Top" Width="300">
+                <Rectangle.LayoutTransform>
+                    <RotateTransform Angle="20"/>
+                </Rectangle.LayoutTransform>
+            </Rectangle>
+            <Label Name="featuredGamePromoText" Grid.Row="1" Content="FEATURED TODAY" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="600,15,0,0" VerticalAlignment="Top" FontSize="22">
+                <Label.LayoutTransform>
+                    <RotateTransform Angle="20"></RotateTransform>
+                </Label.LayoutTransform>
+            </Label>
+            <Image Grid.Row="1" x:Name="featuredGame" Source="/images/default_gamepic.png" Stretch="Fill"  RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Center" Height="220" VerticalAlignment="Top" Width="270" Margin="-450,75,0,0" />
+            <Rectangle Visibility="Hidden" x:Name="gameInfoBg" Grid.Row="1"  HorizontalAlignment="Center" Opacity="0.6" Height="50" Margin="0,479,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Top" Width="250" IsHitTestVisible="False"/>
+            <Label Visibility="Hidden" Name="gameInfoName" Grid.Row="1" Content="Red Dead Redemption 2" FontFamily="{StaticResource Nanotech}" Foreground="White" HorizontalAlignment="Center" Margin="0,485,0,0" VerticalAlignment="Top" FontSize="18" MaxWidth="248" IsHitTestVisible="False"/>
+            <Rectangle x:Name="gamesBg" Grid.Row="1"  HorizontalAlignment="Center" Opacity="0.4" Height="1350" Margin="0,415,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Top" Width="1300"/>
+
+        </Grid>
+    </ScrollViewer>
 </Page>

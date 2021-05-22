@@ -27,36 +27,36 @@
 
 
         <!--*Buton pt creare utilizator nou*-->
-        <Label Content="password" HorizontalAlignment="Left" Margin="16,327,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Grid.Column="1" Height="37"/>
+        <Label Content="password" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="16,327,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Grid.Column="1" Height="37"/>
 
 
         <!--*Buton pt creare utilizator nou*-->
-        <Button Content="NEW USER" Click="NewUserButton" HorizontalAlignment="Left" Margin="13,477,0,0" VerticalAlignment="Top" Height="40" Width="278" RenderTransformOrigin="0.5,0.5" Visibility="Visible" BorderBrush="{x:Null}" Background="Black" FontFamily="Segoe UI" FontSize="20" FontWeight="Normal" Grid.Column="1" Foreground="White">
+        <Button Content="NEW USER" Click="NewUserButton" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="13,477,0,0" VerticalAlignment="Top" Height="40" Width="278" RenderTransformOrigin="0.5,0.5" Visibility="Visible" BorderBrush="{x:Null}" Background="Black" FontSize="20" FontWeight="Normal" Grid.Column="1" Foreground="White">
 
         </Button>
 
         <!--*Buton logare utilizator existent*-->
-        <Button Content="LOGIN" Click="LoginUser" HorizontalAlignment="Left" Margin="13,427,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
+        <Button Content="LOGIN" Click="LoginUser" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="13,427,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
 
         <!--Aici ma gandesc sa facem o lista scurta, mai discutam despre asta-->
-        <Button Content="CONTINUE AS GUEST" Click="ShopButton" HorizontalAlignment="Left" Margin="13,577,0,0"  VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
+        <Button Content="CONTINUE AS GUEST" Click="ShopButton" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="13,527,0,0"  VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
 
 
         <!--*Butonul de exit*-->
-        <Button Content="EXIT" Click="ExitButton" HorizontalAlignment="Left" Margin="13,527,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
+        <Button Content="EXIT" Click="ExitButton" HorizontalAlignment="Left" Margin="13,577,0,0" VerticalAlignment="Top" Height="40" Width="278" FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Grid.Column="1" Foreground="White"/>
 
-        <Button Content="Recover" x:Name="recoverButton" Visibility="Hidden" Click="RecoverAccount" HorizontalAlignment="Left" Margin="181,254,0,0" VerticalAlignment="Top" Height="25" Width="70" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Grid.Column="1"/>
+        <Button Content="Recover" x:Name="recoverButton" FontFamily="{StaticResource Nanotech}" Visibility="Hidden" Click="RecoverAccount" HorizontalAlignment="Left" Margin="181,577,0,0" VerticalAlignment="Top" Height="25" Width="70" Background="#FFCED4DA" BorderBrush="{x:Null}" FontWeight="Bold" UseLayoutRounding="False" Grid.Column="1"/>
 
-        <TextBox x:Name="usernameBox" Tag="Name of customer"  HorizontalAlignment="Left" Margin="13,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" Grid.Column="1" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White"/>
+        <TextBox x:Name="usernameBox" Tag="Name of customer" FontFamily="{StaticResource Nanotech}"  HorizontalAlignment="Left" Margin="13,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Height="40" FontSize="24" FontWeight="Normal" BorderBrush="Black" Grid.Column="1" BorderThickness="4,4,4,4" Background="White" SelectionBrush="#FF3A3A3A" SelectionTextBrush="White"/>
 
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="13,362,0,0" VerticalAlignment="Top" Width="278" Height="40" FontSize="24" Background="White" Grid.Column="1" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
-        <Label Content="username" HorizontalAlignment="Left" Margin="16,253,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Grid.Column="1" Height="37"/>
+        <PasswordBox x:Name="passwordBox" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="13,362,0,0" VerticalAlignment="Top" Width="278" Height="40" FontSize="24" Background="White" Grid.Column="1" BorderBrush="Black" SelectionBrush="#FF3A3A3A" BorderThickness="4,4,4,4"/>
+        <Label Content="username" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Left" Margin="16,253,0,0" VerticalAlignment="Top" Width="200" FontSize="20" Grid.Column="1" Height="37"/>
 
         <!--*Notificare*-->
         <Grid x:Name="Notification" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 75, -485, 0">
             <Rectangle Height="82" Stroke="Black" Width="481" Fill="Black" Opacity="0.5"/>
             <Rectangle Height="70" Stroke="DarkOrange" Width="3" Fill="DarkOrange" Opacity="0.5" Margin="-300, 0, 0, 0"/>
-            <Label x:Name="NotificationLabel" Content="" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="DarkOrange"/>
+            <Label x:Name="NotificationLabel" FontFamily="{StaticResource Nanotech}" Content="" Opacity="0.85" Margin="95,22,0,0" FontSize="20" FontWeight="Normal" Foreground="DarkOrange"/>
             <Image x:Name="NotificationImage" Height="50" Margin="-390,0,0,0" Width="50"/>
 
                 <Grid.RenderTransform>
