@@ -10,6 +10,9 @@
     <Compile Update="Panels\NewGamePanel.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Panels\Pages\ShopPanel_Game.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Panels\Pages\ShopPanel_Library.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +45,9 @@
     <Page Update="Panels\NewGamePanel.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Panels\Pages\ShopPanel_Game.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Panels\Pages\ShopPanel_Library.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -68,7 +74,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-   <Resource Include="fonts\NanoTech Regular.otf" />
- </ItemGroup>
-
+    <Resource Include="fonts\NanoTech Regular.otf" />
+  </ItemGroup>
 </Project>

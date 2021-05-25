@@ -8,7 +8,7 @@
       d:DesignHeight="720" d:DesignWidth="1360"
       Title="ShopPanel_Library">
 
-    <Grid>
-        <Label Content="Library - test " FontSize="100" HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" Height="151" Width="608" RenderTransformOrigin="0.5,1.048"/>
+    <Grid Name="libraryPage">
+        
     </Grid>
 </Page>

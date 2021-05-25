@@ -73,7 +73,8 @@ namespace proiect_ii.Database.Game
                             showoff_img_link_4 = reader.GetString(12),
                             showoff_img_link_5 = reader.GetString(13),
                             showoff_video_link_1 = reader.GetString(14),
-                            showoff_video_link_2 = reader.GetString(15)
+                            showoff_video_link_2 = reader.GetString(15),
+                            price = reader.GetDouble(16)
                         });
                     }
                 }
@@ -114,7 +115,8 @@ namespace proiect_ii.Database.Game
                             showoff_img_link_4 = reader.GetString(12),
                             showoff_img_link_5 = reader.GetString(13),
                             showoff_video_link_1 = reader.GetString(14),
-                            showoff_video_link_2 = reader.GetString(15)
+                            showoff_video_link_2 = reader.GetString(15),
+                            price = reader.GetDouble(16)
                         });
                     }
                 }
@@ -133,7 +135,7 @@ namespace proiect_ii.Database.Game
             {
                 conn.Open();
 
-                using (var command = new NpgsqlCommand("SELECT * FROM games name = @name", conn))
+                using (var command = new NpgsqlCommand("SELECT * FROM games WHERE name = @name", conn))
                 {
                     command.Parameters.AddWithValue("name", gameName);
 
@@ -157,6 +159,7 @@ namespace proiect_ii.Database.Game
                         game.showoff_img_link_5 = reader.GetString(13);
                         game.showoff_video_link_1 = reader.GetString(14);
                         game.showoff_video_link_2 = reader.GetString(15);
+                        game.price = reader.GetDouble(16);
                     }
                 }
 
@@ -198,6 +201,7 @@ namespace proiect_ii.Database.Game
                         game.showoff_img_link_5 = reader.GetString(13);
                         game.showoff_video_link_1 = reader.GetString(14);
                         game.showoff_video_link_2 = reader.GetString(15);
+                        game.price = reader.GetDouble(16);
                     }
                 }
 

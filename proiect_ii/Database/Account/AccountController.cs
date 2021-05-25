@@ -62,6 +62,7 @@ namespace proiect_ii.Database.Account
                         account.securityAnswer2 = reader.GetString(7);
                         account.securityQuestion3 = reader.GetString(8);
                         account.securityAnswer3 = reader.GetString(9);
+                        account.balance = reader.GetDouble(10);
                     }
                 }
 
@@ -96,6 +97,7 @@ namespace proiect_ii.Database.Account
                         account.securityAnswer2 = reader.GetString(7);
                         account.securityQuestion3 = reader.GetString(8);
                         account.securityAnswer3 = reader.GetString(9);
+                        account.balance = reader.GetDouble(10);
                     }
                 }
 
@@ -202,6 +204,98 @@ namespace proiect_ii.Database.Account
             }
 
             return favoriteGameIds;
+        }
+
+        public void AddOwnedGame(int accountId, int gameId)
+        {
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("INSERT INTO OwnedGames (account_id, game_id) VALUES(@account_id, @game_id)", conn))
+                {
+                    command.Parameters.AddWithValue("account_id", accountId);
+                    command.Parameters.AddWithValue("game_id", gameId);
+
+                    command.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+        }
+
+        public List<int> GetOwnedGames(int accountId)
+        {
+            List<int> favoriteGameIds = new List<int>();
+
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("SELECT * FROM OwnedGames WHERE account_id = @account_id", conn))
+                {
+                    command.Parameters.AddWithValue("account_id", accountId);
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        favoriteGameIds.Add(reader.GetInt32(1));
+                    }
+
+                }
+                conn.Close();
+            }
+
+            return favoriteGameIds;
+        }
+
+        public void UpdateBalance(int id, double balance)
+        {
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("UPDATE accounts SET balance = @balance WHERE id = @id", conn))
+                {
+                    command.Parameters.AddWithValue("balance", balance);
+                    command.Parameters.AddWithValue("id", id);
+
+                    command.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+        }
+
+        public bool GameIsOwned(int accountId, int gameId)
+        {
+            bool isOwned;
+
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+                
+                using (var command = new NpgsqlCommand("SELECT * FROM OwnedGames WHERE account_id = @account_id AND game_id = @game_id", conn))
+                {
+                    command.Parameters.AddWithValue("account_id", accountId);
+                    command.Parameters.AddWithValue("game_id", gameId);
+
+                    var reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        isOwned = true;
+                    }
+                    else
+                    {
+                        isOwned = false;
+                    }
+                }
+
+                conn.Close();
+            }
+
+            return isOwned;
         }
     }
 }

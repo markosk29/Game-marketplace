@@ -30,6 +30,10 @@ namespace proiect_ii.Panels
             StoreProfileButton.Content = " ";
 
             registerButton.Visibility = Visibility.Visible;
+            balanceBg.Visibility = Visibility.Hidden;
+            balance.Visibility = Visibility.Hidden;
+            euroSign.Visibility = Visibility.Hidden;
+            addBalance.Visibility = Visibility.Hidden;
 
         }
 
@@ -37,20 +41,22 @@ namespace proiect_ii.Panels
         {
             InitializeComponent();
 
-            navigationService.Navigate(new ShopPanel_Library());
+            this._user = account;
+
+            navigationService.Navigate(new ShopPanel_Library(_user));
 
             animCompleted = true;
 
             CreateNotification( "Welcome, " + account.username + "!");
 
-            this._user = account;
+            balance.Content = _user.balance.ToString();
         }
 
         public void ShowStorePage(object sender, RoutedEventArgs e)
         {
             if (_user != null)
             {
-                this.navigationService.Navigate(new ShopPanel_Shop(_user), UriKind.Relative);
+                this.navigationService.Navigate(new ShopPanel_Shop(_user, balance), UriKind.Relative);
             }
             else
             {
@@ -60,7 +66,7 @@ namespace proiect_ii.Panels
 
         public void ShowLibraryPage(object sender, RoutedEventArgs e)
         {
-            this.navigationService.Navigate(new ShopPanel_Library(), UriKind.Relative);
+            this.navigationService.Navigate(new ShopPanel_Library(_user), UriKind.Relative);
         }
 
         public void ShowProfilePage(object sender, RoutedEventArgs e)

@@ -24,5 +24,7 @@ namespace proiect_ii.Database.Account
 
         public String securityAnswer3 { get; set; }
 
+        public double balance { get; set; }
+
     }
 }

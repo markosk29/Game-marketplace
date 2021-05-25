@@ -17,6 +17,7 @@ namespace proiect_ii.Panels.Pages
     {
         private List<Game> _availableGames;
         private List<Image> _printedGames;
+        private List<int> _favoriteGameIds;
 
         private GameController _gameController;
         private AccountController _accountController;
@@ -24,6 +25,8 @@ namespace proiect_ii.Panels.Pages
         private Account _user;
 
         private BitmapImage _placeholderImage;
+
+        private Label _balance;
 
         public ShopPanel_Shop()
         {
@@ -47,7 +50,7 @@ namespace proiect_ii.Panels.Pages
             suggestedGame4.Visibility = Visibility.Hidden;
         }
 
-        public ShopPanel_Shop(Account account)
+        public ShopPanel_Shop(Account account, Label balance)
         {
             InitializeComponent();
 
@@ -61,6 +64,8 @@ namespace proiect_ii.Panels.Pages
 
             this._placeholderImage = new BitmapImage(new Uri("/images/default_gamepic.png", UriKind.Relative));
 
+            this._balance = balance;
+
             ListSuggestedGames();
             ListFeaturedGame(false);
             ListAllGames(false);
@@ -69,7 +74,7 @@ namespace proiect_ii.Panels.Pages
         private void ListSuggestedGames()
         {
             List<Image> suggestedGameImages = this.GetSuggestedGames();
-            List<int> favoriteGameIds = _accountController.GetFavoriteGames(_user.id);
+            _favoriteGameIds = _accountController.GetFavoriteGames(_user.id);
 
             int i = 0;
 
@@ -77,7 +82,10 @@ namespace proiect_ii.Panels.Pages
             {
                 try
                 {
-                    suggestedGame.Source = new BitmapImage(new Uri(_gameController.GetGameById(favoriteGameIds[i]).main_img_link, UriKind.Absolute));
+                    suggestedGame.Source = new BitmapImage(new Uri(_gameController.GetGameById(_favoriteGameIds[i]).main_img_link, UriKind.Absolute));
+
+                    suggestedGame.Name = suggestedGame.Name + "_" + i;
+                    suggestedGame.AddHandler(MouseDownEvent, new RoutedEventHandler(GoToFavoriteGamePage));
                 }
                 catch (Exception e)
                 {
@@ -153,6 +161,7 @@ namespace proiect_ii.Panels.Pages
 
             _printedGames[0].AddHandler(MouseEnterEvent, new RoutedEventHandler(ShowGameTitle));
             _printedGames[0].AddHandler(MouseLeaveEvent, new RoutedEventHandler(HideGameTitle));
+            _printedGames[0].AddHandler(MouseDownEvent, new RoutedEventHandler(GoToGamePage));
 
             Grid.SetRow(_printedGames[0], 1);
             RenderOptions.SetBitmapScalingMode(_printedGames[0], BitmapScalingMode.Fant);
@@ -202,6 +211,7 @@ namespace proiect_ii.Panels.Pages
 
                     _printedGames[k].AddHandler(MouseEnterEvent, new RoutedEventHandler(ShowGameTitle));
                     _printedGames[k].AddHandler(MouseLeaveEvent, new RoutedEventHandler(HideGameTitle));
+                    _printedGames[k].AddHandler(MouseDownEvent, new RoutedEventHandler(GoToGamePage));
 
                     Grid.SetRow(_printedGames[k], 1);
                     RenderOptions.SetBitmapScalingMode(_printedGames[k], BitmapScalingMode.Fant);
@@ -260,6 +270,21 @@ namespace proiect_ii.Panels.Pages
         {
             gameInfoBg.Visibility = Visibility.Hidden;
             gameInfoName.Visibility = Visibility.Hidden;
+        }
+
+        private void GoToGamePage(object sender, RoutedEventArgs e)
+        {
+            Image game = (Image) sender;
+
+            this.NavigationService.Navigate(new ShopPanel_Game(_availableGames[Convert.ToInt32(game.Name.Split("_")[1])], _user, _balance), UriKind.Relative);
+        }
+
+        private void GoToFavoriteGamePage(object sender, RoutedEventArgs e)
+        {
+            Image game = (Image) sender;
+
+            this.NavigationService.Navigate(
+                new ShopPanel_Game(_gameController.GetGameById(_favoriteGameIds[Convert.ToInt32(game.Name.Split("_")[1])]), _user, _balance), UriKind.Relative);
         }
     }
 }

@@ -34,5 +34,7 @@ namespace proiect_ii.Database.Game
         public string showoff_video_link_1 { get; set; }
 
         public string showoff_video_link_2 { get; set; }
+
+        public double price { get; set; }
     }
 }

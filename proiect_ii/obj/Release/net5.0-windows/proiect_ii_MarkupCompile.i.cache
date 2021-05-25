@@ -1,0 +1,20 @@
+﻿proiect_ii
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\VS projects\proiect_ii\proiect_ii\obj\Release\net5.0-windows\
+proiect_ii
+none
+false
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
+D:\VS projects\proiect_ii\proiect_ii\App.xaml
+10883787023
+
+19697359636
+194549852929
+MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\Pages\ShopPanel_Library.xaml;Panels\Pages\ShopPanel_Profile.xaml;Panels\Pages\ShopPanel_Shop.xaml;Panels\QuestionsPanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\ShopPanel.xaml;Panels\SuggestionsPanel.xaml;
+
+False
+

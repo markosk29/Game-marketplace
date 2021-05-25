@@ -5,13 +5,23 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <NoWin32Manifest>true</NoWin32Manifest>
+    <Platforms>AnyCPU;x64</Platforms>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\add.png" />
     <None Remove="images\app.ico" />
+    <None Remove="images\close.png" />
     <None Remove="images\default_gamepic.png" />
     <None Remove="images\default_profilepic.png" />
     <None Remove="images\edit.png" />
+    <None Remove="images\euro.png" />
+    <None Remove="images\fullscreen.png" />
     <None Remove="images\success.png" />
     <None Remove="images\warning.png" />
     <None Remove="main3.png" />
@@ -26,14 +36,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CefSharp.Wpf" Version="90.6.50" />
     <PackageReference Include="Npgsql" Version="5.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\app.ico" />
+    <Resource Include="images\close.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\default_gamepic.png" />
     <Resource Include="images\default_profilepic.png" />
     <Resource Include="images\edit.png" />
+    <Resource Include="images\euro.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\fullscreen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\success.png" />
     <Resource Include="images\warning.png" />
     <Resource Include="main3.png" />

@@ -132,6 +132,10 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "CefSharp.Wpf": {
+              "target": "Package",
+              "version": "[90.6.50, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[5.0.3, )"
