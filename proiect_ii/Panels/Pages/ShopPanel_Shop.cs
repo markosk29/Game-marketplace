@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using proiect_ii.Database.Account;
 using proiect_ii.Database.Game;
 
@@ -129,6 +130,8 @@ namespace proiect_ii.Panels.Pages
             double top = 450;
 
             gamesBg.Height = 950;
+
+            _availableGames = Shuffle(_availableGames);
 
             if (isGuest)
             {
@@ -285,6 +288,23 @@ namespace proiect_ii.Panels.Pages
 
             this.NavigationService.Navigate(
                 new ShopPanel_Game(_gameController.GetGameById(_favoriteGameIds[Convert.ToInt32(game.Name.Split("_")[1])]), _user, _balance), UriKind.Relative);
+        }
+
+        private List<T> Shuffle<T>(List<T> list)
+        {
+            Random random = new Random();
+
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = random.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+
+            return list;
         }
     }
 }

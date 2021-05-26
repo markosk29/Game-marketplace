@@ -49,7 +49,7 @@ namespace proiect_ii.Panels
 
             CreateNotification( "Welcome, " + account.username + "!");
 
-            balance.Content = _user.balance.ToString();
+            balance.Content = _user.balance.ToString("#.##");
         }
 
         public void ShowStorePage(object sender, RoutedEventArgs e)

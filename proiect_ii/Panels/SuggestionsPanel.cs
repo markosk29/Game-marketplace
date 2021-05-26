@@ -203,7 +203,6 @@ namespace proiect_ii.Panels
 
         private void NextButton(Object sender, RoutedEventArgs e)
         {
-            _newAccount.balance = 0.00;
             LinkObjectToDb();
 
             AddFavoriteGamesToDb();
@@ -223,7 +222,6 @@ namespace proiect_ii.Panels
         private void LinkObjectToDb()
         {
             accountController.AddToDatabase(_newAccount);
-
         }
 
         private void AddFavoriteGamesToDb()

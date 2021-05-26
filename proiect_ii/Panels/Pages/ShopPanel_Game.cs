@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using CefSharp;
+using CefSharp.Wpf;
 using proiect_ii.Database.Account;
 using proiect_ii.Database.Game;
 
@@ -68,6 +71,7 @@ namespace proiect_ii.Panels.Pages
             if (_game.price == 0)
             {
                 gamePrice.Content = "Free to play";
+                buyButton.Content = "Add to library";
             }
             else
             {
@@ -201,13 +205,27 @@ namespace proiect_ii.Panels.Pages
             {
                 if (_user.balance >= _game.price)
                 {
-                    buyButton.Visibility = Visibility.Hidden;
-                    confirmPurchaseGrid.Visibility = Visibility.Visible;
+                    if (_game.price == 0)
+                    {
+                        buyButton.Visibility = Visibility.Hidden;
+                        confirmPurchaseGrid.Visibility = Visibility.Visible;
 
-                    confirmPrice.Content = "€" + _game.price;
+                        confirmMessage.Content = "Game will be added to your library,";
+                        confirmPrice.Content = "free of charge.";
 
-                    RoutedEventArgs newEventArgs = new RoutedEventArgs(ConfirmPurchaseEvent);
-                    confirmPurchaseGrid.RaiseEvent(newEventArgs);
+                        RoutedEventArgs newEventArgs = new RoutedEventArgs(ConfirmPurchaseEvent);
+                        confirmPurchaseGrid.RaiseEvent(newEventArgs);
+                    }
+                    else
+                    {
+                        buyButton.Visibility = Visibility.Hidden;
+                        confirmPurchaseGrid.Visibility = Visibility.Visible;
+
+                        confirmPrice.Content = "€" + _game.price;
+
+                        RoutedEventArgs newEventArgs = new RoutedEventArgs(ConfirmPurchaseEvent);
+                        confirmPurchaseGrid.RaiseEvent(newEventArgs);
+                    }
                 }
                 else
                 {
@@ -236,10 +254,19 @@ namespace proiect_ii.Panels.Pages
             confirmPurchaseGrid.RaiseEvent(newEventArgs);
             
             _user.balance -= _game.price;
-            _balance.Content = _user.balance.ToString();
+            _balance.Content = _user.balance.ToString("#.##");
 
             _accountController.UpdateBalance(_user.id, _user.balance);
             _accountController.AddOwnedGame(_user.id, _game.id);
+
+            if (_game.price == 0)
+            {
+                CreateNotification("Game added to library!", "success");
+            }
+            else
+            {
+                CreateNotification("Game successfully purchased!", "success");
+            }
         }
 
         private void HideConfirmGrid(object sender, EventArgs e)
@@ -378,6 +405,11 @@ namespace proiect_ii.Panels.Pages
         private void NotificationAnimCompleted(object sender, EventArgs e)
         {
             _animCompleted = true;
+        }
+
+        private void PromoVideo_OnLostFocus(object sender, RoutedEventArgs e)
+        {
+            promoVideo.WebBrowser.Dispose();
         }
     }
 }

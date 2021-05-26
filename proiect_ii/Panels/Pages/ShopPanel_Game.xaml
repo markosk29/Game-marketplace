@@ -86,7 +86,7 @@
             <Image Name="gamePromo" Source="/images/default_gamepic.png" Stretch="Fill" RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Center" Height="250" Margin="0,0, 0,0" VerticalAlignment="Top" Width="450"/>
 
             <wpf:ChromiumWebBrowser Name="promoVideo" HorizontalAlignment="Center" VerticalAlignment="Top"
-                                    Margin="0, 0, 0, 0" Width="450" Height="250" Visibility="Hidden"/>
+                                    Margin="0, 0, 0, 0" Width="450" Height="250" Visibility="Hidden" LostFocus="PromoVideo_OnLostFocus"/>
 
             <Rectangle Name="rightPromoButton" HorizontalAlignment="Center" Opacity="0.7" Height="250" Width="40" Margin="410,0,0,0" Fill="Black" 
                        Stroke="Orange" VerticalAlignment="Top" Stretch="Fill" Visibility="Hidden"/>
@@ -155,7 +155,7 @@
 
         <Grid Name="confirmPurchaseGrid" HorizontalAlignment="Center" VerticalAlignment="Top" Height="150" Width="500" Margin="-4000, 150, 0, 0" Visibility="Hidden">
             <Rectangle Opacity="0.85" Fill="Black" Stroke="Black"  Stretch="Fill"/>
-            <Label Content="Confirm purchase of the game for:" FontFamily="{StaticResource Nanotech}" Margin="40, -60, 0, 0" 
+            <Label Name="confirmMessage" Content="Confirm purchase of the game for:" FontFamily="{StaticResource Nanotech}" Margin="40, -60, 0, 0" 
                    Opacity="1" Foreground="White" FontSize="25" Height="70"/>
             <Label Name="confirmPrice" Content="€59.99" FontFamily="{StaticResource Nanotech}" Margin="0, 25, 0, 0" HorizontalAlignment="Center"
                    Opacity="1" Foreground="White" FontSize="25" Height="70"/>

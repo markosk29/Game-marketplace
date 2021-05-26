@@ -59,6 +59,7 @@ namespace proiect_ii.Panels
                     _newAccount.username = usernameTextbox.Text;
                     _newAccount.password = passwordBox.Password;
                     _newAccount.email = emailTextbox.Text;
+                    _newAccount.balance = 0;
 
                     QuestionsPanel questionsPanel = new QuestionsPanel(this, _newAccount);
                     questionsPanel.Show();
