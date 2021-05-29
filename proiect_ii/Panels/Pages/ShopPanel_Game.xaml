@@ -89,10 +89,16 @@
                                     Margin="0, 0, 0, 0" Width="450" Height="250" Visibility="Hidden" LostFocus="PromoVideo_OnLostFocus"/>
 
             <Rectangle Name="rightPromoButton" HorizontalAlignment="Center" Opacity="0.7" Height="250" Width="40" Margin="410,0,0,0" Fill="Black" 
-                       Stroke="Orange" VerticalAlignment="Top" Stretch="Fill" Visibility="Hidden"/>
+                       Stroke="OrangeRed" VerticalAlignment="Top" Stretch="Fill" Visibility="Hidden"/>
 
             <Rectangle Name="leftPromoButton" HorizontalAlignment="Center" Opacity="0.7" Height="250" Width="40" Margin="-410,0,0,0" Fill="Black" 
-                       Stroke="Orange" VerticalAlignment="Top" Stretch="Fill" Visibility="Hidden"/>
+                       Stroke="OrangeRed" VerticalAlignment="Top" Stretch="Fill" Visibility="Hidden"/>
+
+            <Image Name="leftArrow" Source="../../images/left-arrow.png"  Stretch="Fill" IsHitTestVisible="false"
+                   RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Left" Height="30" Margin="5,100, 0,0" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
+
+            <Image Name="rightArrow" Source="../../images/right-arrow.png"  Stretch="Fill" IsHitTestVisible="false"
+                   RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Right" Height="30" Margin="0,100, 5,0" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
 
             <Image Name="promoFullscreenButton" Source="../../images/fullscreen.png" Stretch="Fill"
                    RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Center" Height="50" Margin="0,4, 0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>

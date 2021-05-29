@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using proiect_ii.Database.Account;
 using proiect_ii.Database.Game;
+using Rectangle = System.Windows.Shapes.Rectangle;
 
 
 namespace proiect_ii.Panels.Pages
@@ -19,6 +21,7 @@ namespace proiect_ii.Panels.Pages
         private List<Game> _availableGames;
         private List<Image> _printedGames;
         private List<int> _favoriteGameIds;
+        private List<Game> _foundGames;
 
         private GameController _gameController;
         private AccountController _accountController;
@@ -29,16 +32,21 @@ namespace proiect_ii.Panels.Pages
 
         private Label _balance;
 
-        public ShopPanel_Shop()
+        private Game _featuredGame;
+
+        public ShopPanel_Shop(Game featuredGame)
         {
             InitializeComponent();
 
-            this._printedGames = new List<Image>();
+            this._printedGames = new();
 
-            this._gameController = new GameController();
+            this._gameController = new();
+            this._foundGames = new();
             this._availableGames = _gameController.ReadAllGames();
 
             this._placeholderImage = new BitmapImage(new Uri("/images/default_gamepic.png", UriKind.Relative));
+
+            this._featuredGame = featuredGame;
 
             ListFeaturedGame(true);
             ListAllGames(true);
@@ -51,14 +59,15 @@ namespace proiect_ii.Panels.Pages
             suggestedGame4.Visibility = Visibility.Hidden;
         }
 
-        public ShopPanel_Shop(Account account, Label balance)
+        public ShopPanel_Shop(Account account, Label balance, Game featuredGame)
         {
             InitializeComponent();
 
-            this._printedGames = new List<Image>();
+            this._printedGames = new();
 
-            this._gameController = new GameController();
-            this._accountController = new AccountController();
+            this._gameController = new();
+            this._accountController = new();
+            this._foundGames = new();
             this._availableGames = _gameController.ReadAllGames();
 
             this._user = _accountController.GetAccountByUsername(account.username);
@@ -66,6 +75,7 @@ namespace proiect_ii.Panels.Pages
             this._placeholderImage = new BitmapImage(new Uri("/images/default_gamepic.png", UriKind.Relative));
 
             this._balance = balance;
+            this._featuredGame = featuredGame;
 
             ListSuggestedGames();
             ListFeaturedGame(false);
@@ -99,9 +109,8 @@ namespace proiect_ii.Panels.Pages
 
         private void ListFeaturedGame(bool isGuest)
         {
-            featuredGame.Source = new BitmapImage(new Uri(_availableGames[3].main_img_link, UriKind.Absolute));
-
-            featuredGameDescription.Text = _availableGames[3].description;
+            featuredGame.Source = new BitmapImage(new Uri(_featuredGame.main_img_link, UriKind.Absolute));
+            featuredGameDescription.Text = _featuredGame.description;
 
             if (isGuest)
             {
@@ -288,6 +297,146 @@ namespace proiect_ii.Panels.Pages
 
             this.NavigationService.Navigate(
                 new ShopPanel_Game(_gameController.GetGameById(_favoriteGameIds[Convert.ToInt32(game.Name.Split("_")[1])]), _user, _balance), UriKind.Relative);
+        }
+
+        public void SearchBarClear(object sender, RoutedEventArgs e)
+        {
+            if(searchBar.Text.Equals("SEARCH..."))
+            {
+                searchBar.Text = "";
+            }
+        }
+
+        public void SearchBarExit(object sender, RoutedEventArgs e)
+        {
+            if(searchBar.Text.Equals(""))
+            {
+                searchBar.Text = "SEARCH...";
+            }
+        }
+
+        public void SearchForGames(object sender, RoutedEventArgs e)
+        {
+            if (!searchBar.Text.Equals("SEARCH...") && !searchBar.Text.Equals(""))
+            {
+                _foundGames = _gameController.SearchGame(searchBar.Text.Split(" ")[0]);
+
+                if(_foundGames.Count != 0)
+                {
+                    searchBox.Children.Clear();
+
+                    searchBox.Height = 80;
+                    searchBox.Height *= _foundGames.Count;
+
+                    searchBox.Visibility = Visibility.Visible;
+                    searchGameImg.Source = new BitmapImage(new Uri(_foundGames[0].main_img_link, UriKind.Absolute));
+                    searchGameTitle.Content = _foundGames[0].name;
+
+                    searchBox.Children.Add(searchBoxBg);
+                    searchBox.Children.Add(searchGame_0);
+
+                    if (_foundGames.Count > 1)
+                    {
+                        int i = 1;
+                        double top = searchGame_0.Margin.Top;
+
+                        while (i < _foundGames.Count)
+                        {
+                            top += 80;
+
+                            Grid grid = new();
+                            grid.Name = "searchGame" + i;
+                            grid.HorizontalAlignment = HorizontalAlignment.Center;
+                            grid.VerticalAlignment = VerticalAlignment.Top;
+                            grid.Height = 70;
+                            grid.Width = 500;
+                            grid.Margin = new Thickness(0, top, 0, 0);
+
+                            Rectangle rectangle = new();
+                            rectangle.Name = "searchGameBg_" + i;
+                            rectangle.Width = 500;
+                            rectangle.Height = 65;
+                            rectangle.Fill = Brushes.Transparent;
+                            rectangle.AddHandler(MouseEnterEvent, new RoutedEventHandler(ChangeSearchGameBg));
+                            rectangle.AddHandler(MouseLeaveEvent, new RoutedEventHandler(RevertSearchGameBg));
+                            rectangle.AddHandler(MouseDownEvent, new RoutedEventHandler(OpenSearchGame));
+
+                            Image image = new();
+                            image.Source = new BitmapImage(new Uri(_foundGames[i].main_img_link, UriKind.Absolute));
+                            image.IsHitTestVisible = false;
+                            image.Stretch = Stretch.Fill;
+                            image.Height = 60;
+                            image.Width = 60;
+                            image.Margin = new Thickness(-420, 0, 0, 0);
+                            RenderOptions.SetBitmapScalingMode(image, BitmapScalingMode.Fant);
+
+                            Label label = new();
+                            label.Content = _foundGames[i].name;
+                            label.IsHitTestVisible = false;
+                            label.FontFamily = Application.Current.Resources["Nanotech"] as FontFamily;
+                            label.Foreground = Brushes.White;
+                            label.FontSize = 25;
+                            label.Height = 50;
+                            label.Margin = new Thickness(90, 10, 0, 0);
+
+                            grid.Children.Add(rectangle);
+                            grid.Children.Add(image);
+                            grid.Children.Add(label);
+
+                            searchBox.Children.Add(grid);
+
+                            i++;
+                        }
+                    }
+                } 
+                else
+                {
+                    searchBox.Visibility = Visibility.Hidden;
+                }
+            }
+        }
+
+        public void ChangeSearchGameBg(object sender, RoutedEventArgs e)
+        {
+            Rectangle rectangle = (Rectangle) sender;
+
+            rectangle.Fill = Brushes.OrangeRed;
+        }
+
+        public void RevertSearchGameBg(object sender, RoutedEventArgs e)
+        {
+            Rectangle rectangle = (Rectangle) sender;
+
+            rectangle.Fill = Brushes.Transparent;
+        }
+
+        public void OpenSearchGame(object sender, RoutedEventArgs e)
+        {
+            Rectangle rectangle = (Rectangle) sender;
+
+            this.NavigationService.Navigate(new ShopPanel_Game(_foundGames[Convert.ToInt32(rectangle.Name.Split("_")[1])], _user, _balance));
+        }
+
+        public void HideSearchBox(object sender, RoutedEventArgs e)
+        {
+            searchBox.Visibility = Visibility.Hidden;
+
+            searchBar.Text = "SEARCH...";
+        }
+
+        public void FeaturedGameEnter(object sender, RoutedEventArgs e)
+        {
+            featuredGameBg.Fill = Brushes.OrangeRed;
+        }
+
+        public void FeaturedGameLeave(object sender, RoutedEventArgs e)
+        {
+            featuredGameBg.Fill = Brushes.Black;
+        }
+
+        public void FeaturedGameClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new ShopPanel_Game(_featuredGame, _user, _balance));
         }
 
         private List<T> Shuffle<T>(List<T> list)

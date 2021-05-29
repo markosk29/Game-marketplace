@@ -112,6 +112,8 @@ namespace proiect_ii.Panels.Pages
 
                 leftPromoButton.Height = 200;
                 rightPromoButton.Height = 200;
+                leftArrow.Margin = new Thickness(5, 75, 0, 0);
+                rightArrow.Margin = new Thickness(0, 75, 5, 0);
 
                 promoFullscreenButton.Visibility = Visibility.Hidden;
                 gamePromo.Visibility = Visibility.Hidden;
@@ -139,6 +141,8 @@ namespace proiect_ii.Panels.Pages
 
                 leftPromoButton.Height = 250;
                 rightPromoButton.Height = 250;
+                leftArrow.Margin = new Thickness(5, 100, 0, 0);
+                rightArrow.Margin = new Thickness(0, 100, 5, 0);
 
                 promoFullscreenButton.Visibility = Visibility.Visible;
                 gamePromo.Visibility = Visibility.Visible;
@@ -158,6 +162,8 @@ namespace proiect_ii.Panels.Pages
         {
             leftPromoButton.Visibility = Visibility.Visible;
             rightPromoButton.Visibility = Visibility.Visible;
+            leftArrow.Visibility = Visibility.Visible;
+            rightArrow.Visibility = Visibility.Visible;
 
             if (_promoIndex < _promoImages.Count)
             {
@@ -170,6 +176,8 @@ namespace proiect_ii.Panels.Pages
             leftPromoButton.Visibility = Visibility.Hidden;
             rightPromoButton.Visibility = Visibility.Hidden;
             promoFullscreenButton.Visibility = Visibility.Hidden;
+            leftArrow.Visibility = Visibility.Hidden;
+            rightArrow.Visibility = Visibility.Hidden;
         }
 
         private void OpenFullscreenPromo(object sender, RoutedEventArgs e)

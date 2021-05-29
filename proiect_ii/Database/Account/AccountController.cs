@@ -226,7 +226,7 @@ namespace proiect_ii.Database.Account
 
         public List<int> GetOwnedGames(int accountId)
         {
-            List<int> favoriteGameIds = new List<int>();
+            List<int> favoriteGameIds = new();
 
             using (var conn = new NpgsqlConnection(GetConnectionString()))
             {

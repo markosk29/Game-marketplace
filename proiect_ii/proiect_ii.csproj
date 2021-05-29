@@ -22,7 +22,11 @@
     <None Remove="images\edit.png" />
     <None Remove="images\euro.png" />
     <None Remove="images\fullscreen.png" />
+    <None Remove="images\left-arrow.png" />
+    <None Remove="images\paypoint.png" />
+    <None Remove="images\right-arrow.png" />
     <None Remove="images\success.png" />
+    <None Remove="images\visa.png" />
     <None Remove="images\warning.png" />
     <None Remove="main3.png" />
     <None Remove="main4.png" />
@@ -33,6 +37,12 @@
     <None Remove="Panels\register_panel1.png" />
     <None Remove="Panels\security1.png" />
     <None Remove="toma formular.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\paypoint.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -57,7 +67,16 @@
     <Resource Include="images\fullscreen.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\left-arrow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\right-arrow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\success.png" />
+    <Resource Include="images\visa.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\warning.png" />
     <Resource Include="main3.png" />
     <Resource Include="main4.png" />

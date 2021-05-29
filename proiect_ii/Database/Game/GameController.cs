@@ -226,5 +226,47 @@ namespace proiect_ii.Database.Game
             }
         }
 
+        public List<Game> SearchGame(string field)
+        {
+            databaseOutput = new();
+
+            using (var conn = new NpgsqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+
+                using (var command = new NpgsqlCommand("SELECT * FROM games WHERE name ILIKE '" +field+ "%'", conn))
+                {
+                    var reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        databaseOutput.Add(new Game()
+                        {
+                            id = reader.GetInt32(0),
+                            name = reader.GetString(1),
+                            publisher = reader.GetString(2),
+                            developer = reader.GetString(3),
+                            description = reader.GetString(4),
+                            category1 = reader.GetString(5),
+                            category2 = reader.GetString(6),
+                            category3 = reader.GetString(7),
+                            main_img_link = reader.GetString(8),
+                            showoff_img_link_1 = reader.GetString(9),
+                            showoff_img_link_2 = reader.GetString(10),
+                            showoff_img_link_3 = reader.GetString(11),
+                            showoff_img_link_4 = reader.GetString(12),
+                            showoff_img_link_5 = reader.GetString(13),
+                            showoff_video_link_1 = reader.GetString(14),
+                            showoff_video_link_2 = reader.GetString(15),
+                            price = reader.GetDouble(16)
+                        });
+                    }
+                }
+
+                conn.Close();
+            }
+
+            return databaseOutput;
+        }
     }
 }

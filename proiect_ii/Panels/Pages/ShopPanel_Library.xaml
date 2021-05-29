@@ -9,6 +9,31 @@
       Title="ShopPanel_Library">
 
     <Grid Name="libraryPage">
-        
+        <Label Name="libraryTitle" Content="YOUR GAMES" FontFamily="{StaticResource Nanotech}" 
+               Opacity="1" HorizontalAlignment="Center" Foreground="White"  Margin="0,-2,0,0" VerticalAlignment="Top" FontSize="45" Height="70"/>
+
+        <Rectangle Name="firstRowBg" HorizontalAlignment="Center" Opacity="0.4" Height="250" Width="10000" Margin="0,50,0,0" Fill="Black" 
+                    Stroke="Black" VerticalAlignment="Top" Stretch="Fill"/>
+
+        <Rectangle Name="secondRowBg" HorizontalAlignment="Center" Opacity="0.4" Height="250" Width="10000" Margin="0,350,0,0" Fill="Black" 
+                    Stroke="Black" VerticalAlignment="Top" Stretch="Fill"/>
+
+        <Rectangle Name="leftButtonBg" HorizontalAlignment="Center" Opacity="0.4" Height="50" Width="100" Margin="-200,300,0,0" Fill="Black" 
+                    Stroke="Black" VerticalAlignment="Top" Stretch="Fill"/>
+
+        <Rectangle Name="rightButtonBg" HorizontalAlignment="Center" Opacity="0.4" Height="50" Width="100" Margin="200,300,0,0" Fill="Black" 
+                    Stroke="Black" VerticalAlignment="Top" Stretch="Fill"/>
+
+        <Label Name="libraryEmptyMessage" Content="It's a bit lonely in here :(" FontFamily="{StaticResource Nanotech}" 
+               Opacity="1" HorizontalAlignment="Center" Foreground="White"  Margin="0,125,0,0" VerticalAlignment="Top" FontSize="45" Height="70"/>
+
+        <Label Name="libraryEmptyMessage2" Content="Feel free to visit our store and expand your collection :)" FontFamily="{StaticResource Nanotech}" 
+               Opacity="1" HorizontalAlignment="Center" Foreground="White"  Margin="0,430,0,0" VerticalAlignment="Top" FontSize="45" Height="70"/>
+
+        <Image Name="leftButton" MouseDown="PreviousButtonClick" Source="../../images/left-arrow.png"  Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="center" Height="75" Margin="-200,285,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <Image Name="rightButton" MouseDown="NextButtonClick" Source="../../images/right-arrow.png"  Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="center" Height="75" Margin="200,285,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Page>

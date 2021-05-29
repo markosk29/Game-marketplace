@@ -87,7 +87,6 @@ D:\VS projects\proiect_ii\proiect_ii\bin\x64\Debug\net5.0-windows\runtimes\win-x
 D:\VS projects\proiect_ii\proiect_ii\bin\x64\Debug\net5.0-windows\runtimes\win-x86\lib\netcoreapp3.0\CefSharp.Core.Runtime.dll
 D:\VS projects\proiect_ii\proiect_ii\bin\x64\Debug\net5.0-windows\runtimes\win-x86\lib\netcoreapp3.0\CefSharp.Core.dll
 D:\VS projects\proiect_ii\proiect_ii\bin\x64\Debug\net5.0-windows\runtimes\win-x86\lib\netcoreapp3.0\CefSharp.dll
-D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\proiect_ii.csprojAssemblyReference.cache
 D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\MainWindow.g.cs
 D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\Panels\NewGamePanel.g.cs
 D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\Panels\Pages\ShopPanel_Game.g.cs
@@ -125,3 +124,4 @@ D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\proiect_ii.dll
 D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\ref\proiect_ii.dll
 D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\proiect_ii.pdb
 D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
+D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\proiect_ii.csproj.AssemblyReference.cache
