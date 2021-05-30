@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using proiect_ii.Database.Account;
@@ -14,6 +15,11 @@ namespace proiect_ii.Panels.Pages
     /// </summary>
     public partial class ShopPanel_Library : Page
     {
+        public static readonly RoutedEvent OpenGameInfoEvent = EventManager.RegisterRoutedEvent(
+            "OpenGameInfo", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ShopPanel_Library));
+        public static readonly RoutedEvent CloseGameInfoEvent = EventManager.RegisterRoutedEvent(
+            "CloseGameInfo", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ShopPanel_Library));
+
         private List<Game> _ownedGames;
         private List<Image> _printedGames;
 
@@ -83,6 +89,8 @@ namespace proiect_ii.Panels.Pages
 
                 RenderOptions.SetBitmapScalingMode(_printedGames[0], BitmapScalingMode.Fant);
 
+                _printedGames[0].AddHandler(MouseDownEvent, new RoutedEventHandler(GameClick));
+
                 libraryPage.Children.Add(_printedGames[0]);
             }
 
@@ -137,6 +145,8 @@ namespace proiect_ii.Panels.Pages
                         }
 
                         RenderOptions.SetBitmapScalingMode(_printedGames[k], BitmapScalingMode.Fant);
+
+                        _printedGames[k].AddHandler(MouseDownEvent, new RoutedEventHandler(GameClick));
 
                         libraryPage.Children.Add(_printedGames[k]);
 
@@ -230,6 +240,35 @@ namespace proiect_ii.Panels.Pages
                     game.Visibility = Visibility.Hidden;
                 }
             }
+        }
+
+        public void GameClick(object sender, RoutedEventArgs e)
+        {
+            Image game = (Image) sender;
+
+            gameInfoImg.Source = game.Source;
+            gameInfoTitle.Content = _ownedGames[Convert.ToInt32(game.Name.Split("_")[1])].name;
+            
+            RoutedEventArgs newEventArgs = new RoutedEventArgs(OpenGameInfoEvent);
+            gameInfoGrid.RaiseEvent(newEventArgs);
+        }
+
+        public void CloseInfo(object sender, RoutedEventArgs e)
+        {
+            RoutedEventArgs newEventArgs = new RoutedEventArgs(CloseGameInfoEvent);
+            gameInfoGrid.RaiseEvent(newEventArgs);
+        }
+
+        public event RoutedEventHandler OpenGameInfo
+        {
+            add { AddHandler(OpenGameInfoEvent, value); }
+            remove { RemoveHandler(OpenGameInfoEvent, value); }
+        }
+
+        public event RoutedEventHandler CloseGameInfo
+        {
+            add { AddHandler(CloseGameInfoEvent, value); }
+            remove { RemoveHandler(CloseGameInfoEvent, value); }
         }
     }
 }

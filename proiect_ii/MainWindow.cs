@@ -85,7 +85,7 @@ namespace proiect_ii
         {
             this.Hide();
 
-            RecoverPanel recoverPanel = new RecoverPanel(this);
+            RecoverPanel recoverPanel = new RecoverPanel();
 
             recoverPanel.Show();
         }

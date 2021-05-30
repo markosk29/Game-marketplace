@@ -58,8 +58,6 @@ namespace proiect_ii.Panels
             this.navigationService.Navigate(new ShopPanel_Shop(_featuredGame), UriKind.Relative);
             StoreLibraryButton.IsHitTestVisible = false;
             StoreLibraryButton.Content = " ";
-            StoreProfileButton.IsHitTestVisible = false;
-            StoreProfileButton.Content = " ";
             LogoutButton.Content = "Register";
 
             balanceBg.Visibility = Visibility.Hidden;
@@ -84,9 +82,16 @@ namespace proiect_ii.Panels
             this.animCompleted = true;
             this._paymentStage2 = false;
 
-            CreateNotification( "Welcome, " + account.username + "!");
+            CreateNotification( "Welcome, " + account.username + "!", "success");
 
-            balance.Content = _user.balance.ToString("#.##");
+            if (_user.balance == 0)
+            {
+                balance.Content = 0;
+            }
+            else
+            {
+                balance.Content = _user.balance.ToString("#.##");
+            }
         }
 
         public void ShowStorePage(object sender, RoutedEventArgs e)
@@ -104,11 +109,6 @@ namespace proiect_ii.Panels
         public void ShowLibraryPage(object sender, RoutedEventArgs e)
         {
             this.navigationService.Navigate(new ShopPanel_Library(_user), UriKind.Relative);
-        }
-
-        public void ShowProfilePage(object sender, RoutedEventArgs e)
-        {
-            this.navigationService.Navigate(new ShopPanel_Profile(_user), UriKind.Relative);
         }
 
         public void LogoutButtonClick(object sender, RoutedEventArgs e)
@@ -305,7 +305,11 @@ namespace proiect_ii.Panels
 
                 paypointBox.Text = "";
 
-                CreateNotification("50€ has been added to your account!");
+                CreateNotification("50€ has been added to your account!", "success");
+            }
+            else
+            {
+                CreateNotification("Code must be 20 characters long!", "warning");
             }
         }
 
@@ -330,13 +334,17 @@ namespace proiect_ii.Panels
 
                 _accountController.UpdateBalance(_user.id, newBalance);
 
-                CreateNotification(visaBox5.Text+ "€ has been added to your account!");
+                CreateNotification(visaBox5.Text+ "€ has been added to your account!", "success");
 
                 visaBox1.Text = "";
                 visaBox2.Text = "";
                 visaBox3.Text = "";
                 visaBox4.Text = "";
                 visaBox5.Text = "";
+            }
+            else
+            {
+                CreateNotification("Data must be numeric and fill the box!", "warning");
             }
         }
 
@@ -351,14 +359,14 @@ namespace proiect_ii.Panels
             _featuredGame = _availableGames[index];
         }
 
-        private void CreateNotification(string message)
+        private void CreateNotification(string message, string type)
         {
             if (animCompleted)
             {
                 animCompleted = false;
 
                 NotificationLabel.Content = message;
-                NotificationImage.Source = new BitmapImage(new Uri("../images/success.png", UriKind.Relative));
+                NotificationImage.Source = new BitmapImage(new Uri("../images/" +type+ ".png", UriKind.Relative));
 
                 RoutedEventArgs newEventArgs = new RoutedEventArgs(SendNotificationEvent);
                 Notification.RaiseEvent(newEventArgs);

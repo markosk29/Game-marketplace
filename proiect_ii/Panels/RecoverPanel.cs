@@ -16,16 +16,13 @@ namespace proiect_ii.Panels
 
         private bool animCompleted;
 
-        private MainWindow _mainWindow;
         private AccountController _accountController;
         private Account _userAccount;
         Utilities utils;
 
-        public RecoverPanel(MainWindow mainWindow)
+        public RecoverPanel()
         {
             InitializeComponent();
-
-            this._mainWindow = mainWindow;
 
             this._accountController = new AccountController();
 
@@ -40,7 +37,7 @@ namespace proiect_ii.Panels
         {
             this.Hide();
 
-            _mainWindow.Show();
+            new MainWindow().Show();
         }
 
         //de facut verificare mai stricta! -> Rezolvat in Inregisrare
@@ -107,6 +104,8 @@ namespace proiect_ii.Panels
 
                 errorLabel.Content = "";
 
+                doneLabel.Visibility = Visibility.Visible;
+
                 _accountController.UpdatePassword(_userAccount);
 
                 FinishPasswordChange();
@@ -121,8 +120,7 @@ namespace proiect_ii.Panels
         {
             this.Close();
 
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            new MainWindow().Show();
         }
 
         private void ChangePassword()

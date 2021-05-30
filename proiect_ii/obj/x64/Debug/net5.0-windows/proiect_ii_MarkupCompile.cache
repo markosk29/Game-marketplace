@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\VS projects\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\
+C:\Users\Melissa\Source\Repos\proiect_ii\proiect_ii\obj\x64\Debug\net5.0-windows\
 proiect_ii
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\VS projects\proiect_ii\proiect_ii\App.xaml
-11474563434
-75-958170143
-18-460931002
-197-856399746
-MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\Pages\ShopPanel_Game.xaml;Panels\Pages\ShopPanel_Library.xaml;Panels\Pages\ShopPanel_Profile.xaml;Panels\Pages\ShopPanel_Shop.xaml;Panels\QuestionsPanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\ShopPanel.xaml;Panels\SuggestionsPanel.xaml;
+C:\Users\Melissa\Source\Repos\proiect_ii\proiect_ii\App.xaml
+10572371603
+752017551559
+17328358437
+197-1401001920
+MainWindow.xaml;Panels\NewGamePanel.xaml;Panels\Pages\ShopPanel_Game.xaml;Panels\Pages\ShopPanel_Library.xaml;Panels\Pages\ShopPanel_Shop.xaml;Panels\QuestionsPanel.xaml;Panels\RecoverPanel.xaml;Panels\RegisterPanel.xaml;Panels\ShopPanel.xaml;Panels\SuggestionsPanel.xaml;
 
-True
+False
 

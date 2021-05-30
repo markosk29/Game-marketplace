@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "JkBuiOIhDsDzB5suHfR3ftXpI/hGP8EpcwVTGmDQTX6O2vI2DFZV/VeEIuxIB/f8BZ023JQ8PGs3f+1jmNzOHA==",
+  "dgSpecHash": "SmpygGC3V+nYkUFa3EX60TwGzrKJTFGrrUp0+0EI8qC4zm5BefBijWeY4yGZBu/iB2V0EYvDVQ+DkI7+b/YLaQ==",
   "success": true,
-  "projectFilePath": "D:\\VS projects\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
+  "projectFilePath": "C:\\Users\\Melissa\\Source\\Repos\\proiect_ii\\proiect_ii\\proiect_ii.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Markos\\.nuget\\packages\\cef.redist.x64\\90.6.5\\cef.redist.x64.90.6.5.nupkg.sha512",
-    "C:\\Users\\Markos\\.nuget\\packages\\cef.redist.x86\\90.6.5\\cef.redist.x86.90.6.5.nupkg.sha512",
-    "C:\\Users\\Markos\\.nuget\\packages\\cefsharp.common\\90.6.50\\cefsharp.common.90.6.50.nupkg.sha512",
-    "C:\\Users\\Markos\\.nuget\\packages\\cefsharp.wpf\\90.6.50\\cefsharp.wpf.90.6.50.nupkg.sha512",
-    "C:\\Users\\Markos\\.nuget\\packages\\npgsql\\5.0.3\\npgsql.5.0.3.nupkg.sha512",
-    "C:\\Users\\Markos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "C:\\Users\\Melissa\\.nuget\\packages\\cef.redist.x64\\90.6.5\\cef.redist.x64.90.6.5.nupkg.sha512",
+    "C:\\Users\\Melissa\\.nuget\\packages\\cef.redist.x86\\90.6.5\\cef.redist.x86.90.6.5.nupkg.sha512",
+    "C:\\Users\\Melissa\\.nuget\\packages\\cefsharp.common\\90.6.50\\cefsharp.common.90.6.50.nupkg.sha512",
+    "C:\\Users\\Melissa\\.nuget\\packages\\cefsharp.wpf\\90.6.50\\cefsharp.wpf.90.6.50.nupkg.sha512",
+    "C:\\Users\\Melissa\\.nuget\\packages\\npgsql\\5.0.3\\npgsql.5.0.3.nupkg.sha512",
+    "C:\\Users\\Melissa\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": [
     {

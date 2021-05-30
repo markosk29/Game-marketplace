@@ -24,16 +24,13 @@
             <Rectangle Name="line2" Opacity="0.6" Height="3" Margin="0,60,0,0" Fill="White" Stroke="White" Width="75"/>
             <Rectangle Name="line3" Opacity="0.6" Height="3" Margin="0,50,0,0" Fill="White" Stroke="White" Width="50"/>
 
-            <Button Name="StorePageButton"  Content="STORE" Click="ShowStorePage" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,49,900,0" VerticalAlignment="Bottom" Height="60" Width="300" 
+            <Button Name="StorePageButton"  Content="STORE" Click="ShowStorePage" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,49,820,0" VerticalAlignment="Bottom" Height="60" Width="400" 
                     FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
-            <Button Name="StoreLibraryButton" Content="LIBRARY" Click="ShowLibraryPage" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,49,300,0" VerticalAlignment="Bottom" Height="60" Width="300" 
+            <Button Name="StoreLibraryButton" Content="LIBRARY" Click="ShowLibraryPage" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Bottom" Height="60" Width="400" 
                     FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
-            <Button Name="StoreProfileButton" Content="PROFILE" Click="ShowProfilePage" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,49,-300,0" VerticalAlignment="Bottom" Height="60" Width="300" 
-                    FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
-
-            <Button Name="LogoutButton" Content="LOGOUT" Click="LogoutButtonClick" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,49,-900,0" VerticalAlignment="Bottom" Height="60" Width="300" 
+            <Button Name="LogoutButton" Content="LOGOUT" Click="LogoutButtonClick" FontFamily="{StaticResource Nanotech}" HorizontalAlignment="Center" Margin="0,49,-820,0" VerticalAlignment="Bottom" Height="60" Width="400" 
                     FontSize="20" Background="Black" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
 
             <Grid.RenderTransform>

@@ -54,21 +54,28 @@ namespace proiect_ii.Panels
             }
             else
             {
-                if (passwordBox.Password.Equals(confirmPassBox.Password))
+                if (new AccountController().GetAccountByUsername(usernameTextbox.Text).username == null)
                 {
-                    _newAccount.username = usernameTextbox.Text;
-                    _newAccount.password = passwordBox.Password;
-                    _newAccount.email = emailTextbox.Text;
-                    _newAccount.balance = 0;
+                    if (passwordBox.Password.Equals(confirmPassBox.Password))
+                    {
+                        _newAccount.username = usernameTextbox.Text;
+                        _newAccount.password = passwordBox.Password;
+                        _newAccount.email = emailTextbox.Text;
+                        _newAccount.balance = 0;
 
-                    QuestionsPanel questionsPanel = new QuestionsPanel(this, _newAccount);
-                    questionsPanel.Show();
+                        QuestionsPanel questionsPanel = new QuestionsPanel(this, _newAccount);
+                        questionsPanel.Show();
 
-                    this.Hide();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        CreateNotification("Passwords must match!", "warning");
+                    }
                 }
                 else
                 {
-                    CreateNotification("Passwords must match!", "warning");
+                    CreateNotification("Username is already in use!", "warning");
                 }
             }
         }

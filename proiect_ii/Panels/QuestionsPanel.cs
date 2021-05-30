@@ -49,17 +49,26 @@ namespace proiect_ii.Panels
                         firstQuestion.SelectedIndex != thirdQuestion.SelectedIndex &&
                         secondQuestion.SelectedIndex != thirdQuestion.SelectedIndex)
                     {
-                        _newAccount.securityQuestion1 = firstQuestion.Text;
-                        _newAccount.securityAnswer1 = firstAnswer.Text;
-                        _newAccount.securityQuestion2 = secondQuestion.Text;
-                        _newAccount.securityAnswer2 = secondAnswer.Text;
-                        _newAccount.securityQuestion3 = thirdQuestion.Text;
-                        _newAccount.securityAnswer3 = thirdAnswer.Text;
+                        if (firstAnswer.Text.Length >= 4 &&
+                            secondAnswer.Text.Length >= 4 &&
+                            thirdAnswer.Text.Length >= 4)
+                        {
+                            _newAccount.securityQuestion1 = firstQuestion.Text;
+                            _newAccount.securityAnswer1 = firstAnswer.Text;
+                            _newAccount.securityQuestion2 = secondQuestion.Text;
+                            _newAccount.securityAnswer2 = secondAnswer.Text;
+                            _newAccount.securityQuestion3 = thirdQuestion.Text;
+                            _newAccount.securityAnswer3 = thirdAnswer.Text;
 
-                        SuggestionsPanel suggestionsPanel = new SuggestionsPanel(this, _newAccount);
-                        suggestionsPanel.Show();
+                            SuggestionsPanel suggestionsPanel = new SuggestionsPanel(this, _newAccount);
+                            suggestionsPanel.Show();
 
-                        this.Hide();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            SendError(4);
+                        }
 
                     }
                     else
@@ -99,6 +108,9 @@ namespace proiect_ii.Panels
                     break;
                 case 3:
                     CreateNotification("The questions must be different!", "warning");
+                    break;
+                case 4:
+                    CreateNotification("Answers must have atleast 4 characters!", "warning");
                     break;
             }
         }

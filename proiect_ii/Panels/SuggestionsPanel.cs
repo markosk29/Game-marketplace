@@ -51,6 +51,7 @@ namespace proiect_ii.Panels
         private List<Game> thirdCategories;
         private List<Image> suggestedGames;
         private List<int> favoriteGameIds;
+        private List<Game> _availableGames;
 
         public SuggestionsPanel(QuestionsPanel questionsPanel, Account newAccount)
         {
@@ -62,12 +63,13 @@ namespace proiect_ii.Panels
             this.Left = _questionsPanel.Left;
             this.Top = _questionsPanel.Top;
 
-            this.accountController = new AccountController();
-            this.gameController = new GameController();
+            this.accountController = new();
+            this.gameController = new();
 
-            this.selectedCategories = new List<int>();
-            this.suggestedGames = new List<Image>();
-            this.favoriteGameIds = new List<int>();
+            this.selectedCategories = new();
+            this.suggestedGames = new();
+            this.favoriteGameIds = new();
+            this._availableGames = new();
 
             initSuggestedGames();
 
@@ -77,7 +79,10 @@ namespace proiect_ii.Panels
         {
             if (firstComboBox.SelectedIndex > -1 &&
                 secondComboBox.SelectedIndex > -1 &&
-                thirdComboBox.SelectedIndex > -1)
+                thirdComboBox.SelectedIndex > -1 &&
+                firstComboBox.SelectedIndex != secondComboBox.SelectedIndex &&
+                firstComboBox.SelectedIndex != thirdComboBox.SelectedIndex &&
+                secondComboBox.SelectedIndex != thirdComboBox.SelectedIndex)
             {
                 AddToList(firstComboBox.SelectedIndex);
                 AddToList(secondComboBox.SelectedIndex);
@@ -117,7 +122,9 @@ namespace proiect_ii.Panels
             secondCategories = gameController.ReadFromDatabaseGames("category2", selectedCategories[1]);
             thirdCategories = gameController.ReadFromDatabaseGames("category3", selectedCategories[2]);
 
-            var rand = new Random();
+            Random rand = new();
+
+            _availableGames = gameController.ReadAllGames();
 
             BitmapImage placeholderImage = new BitmapImage(new Uri("/images/default_gamepic.png", UriKind.Relative));
 
@@ -139,7 +146,8 @@ namespace proiect_ii.Panels
                         }
                         catch (Exception e)
                         {
-                            suggestedGames[i].Source = placeholderImage;
+                            suggestedGames[i].Source = new BitmapImage(new Uri
+                                (_availableGames[rand.Next(_availableGames.Count - 1)].main_img_link, UriKind.Absolute));
                         }
                     }
                 }
@@ -160,7 +168,8 @@ namespace proiect_ii.Panels
                         }
                         catch (Exception e)
                         {
-                            suggestedGames[i].Source = placeholderImage;
+                            suggestedGames[i].Source = new BitmapImage(new Uri
+                                (_availableGames[rand.Next(_availableGames.Count - 1)].main_img_link, UriKind.Absolute));
                         }
                     }
                 }
@@ -181,7 +190,57 @@ namespace proiect_ii.Panels
                         }
                         catch (Exception e)
                         {
-                            suggestedGames[i].Source = placeholderImage;
+                            suggestedGames[i].Source = new BitmapImage(new Uri
+                                (_availableGames[rand.Next(_availableGames.Count - 1)].main_img_link, UriKind.Absolute));
+                        }
+                    }
+                }
+            }
+
+            //failsafe in caz ce se repeta vreo sugestie ca nu avem mii de jocuri
+            for (int i = 0; i < favoriteGameIds.Count; i++)
+            {
+                for (int j = 1; j < favoriteGameIds.Count; j++)
+                {
+                    if (favoriteGameIds[i] == favoriteGameIds[j])
+                    {
+                        int randomIndex = rand.Next(_availableGames.Count - 1);
+
+                        if (_availableGames[randomIndex].id != favoriteGameIds[i])
+                        {
+                            favoriteGameIds[i] = _availableGames[randomIndex].id;
+                        }
+                        else
+                        {
+                            _availableGames.RemoveAt(randomIndex);
+
+                            randomIndex = rand.Next(_availableGames.Count - 1);
+
+                            favoriteGameIds[i] = _availableGames[randomIndex].id;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < favoriteGameIds.Count; i++)
+            {
+                for (int j = 1; j < favoriteGameIds.Count; j++)
+                {
+                    if (favoriteGameIds[i] == favoriteGameIds[j])
+                    {
+                        int randomIndex = rand.Next(_availableGames.Count - 1);
+
+                        if (_availableGames[randomIndex].id != favoriteGameIds[i])
+                        {
+                            favoriteGameIds[i] = _availableGames[randomIndex].id;
+                        }
+                        else
+                        {
+                            _availableGames.RemoveAt(randomIndex);
+
+                            randomIndex = rand.Next(_availableGames.Count - 1);
+
+                            favoriteGameIds[i] = _availableGames[randomIndex].id;
                         }
                     }
                 }

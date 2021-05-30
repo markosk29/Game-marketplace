@@ -35,5 +35,46 @@
 
         <Image Name="rightButton" MouseDown="NextButtonClick" Source="../../images/right-arrow.png"  Stretch="Fill"
                    RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="center" Height="75" Margin="200,285,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <Grid Name="gameInfoGrid" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-800, 0, 0, 0" ZIndex="10">
+            <Rectangle Name="gameInfoBg" Opacity="0.95" Height="750" Width="750" Margin="0,0,0,0" Fill="Black" 
+                       Stroke="Black"  Stretch="Fill"/>
+
+            <Image Name="gameInfoImg" Source="../../images/default_gamepic.png"  Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="Fant"  Height="400" Margin="0,-200,0,0" Width="400"/>
+
+            <Label Name="gameInfoTitle" Content="GAME TITLE" FontFamily="{StaticResource Nanotech}" 
+                   Opacity="1" HorizontalAlignment="Center" Foreground="White"  Margin="0,500,0,0" VerticalAlignment="Top" FontSize="37" Height="70"/>
+
+            <Button Name="gameInfoPlay" Content="PLAY" FontFamily="{StaticResource Nanotech}" Margin="0,530,0,0" 
+                     Height="50" Width="250" FontSize="20" Background="OrangeRed" BorderBrush="{x:Null}" FontWeight="Normal" UseLayoutRounding="False" Foreground="White"/>
+
+            <Image Name="gameInfoClose" Source="../../images/left-arrow.png" MouseDown="CloseInfo" Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="Fant" HorizontalAlignment="Right" Height="100" Margin="0,0,10,0" VerticalAlignment="Center" Width="100"/>
+
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="MovementX" X="0"/>
+            </Grid.RenderTransform>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="local:ShopPanel_Library.OpenGameInfo">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementX" Storyboard.TargetProperty="X" Duration="0:0:4">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="750" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="local:ShopPanel_Library.CloseGameInfo">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MovementX" Storyboard.TargetProperty="X" Duration="0:0:4">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+        </Grid>
     </Grid>
 </Page>

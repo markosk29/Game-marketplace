@@ -221,3 +221,6 @@ D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.genruntimeconfig.cache
 D:\VS projects\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.csprojAssemblyReference.cache
+C:\Users\Melissa\Source\Repos\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.dll
+C:\Users\Melissa\Source\Repos\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\ref\proiect_ii.dll
+C:\Users\Melissa\Source\Repos\proiect_ii\proiect_ii\obj\Debug\net5.0-windows\proiect_ii.pdb

@@ -3064,7 +3064,6 @@
       "path": "system.appcontext/4.1.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3650,7 +3649,6 @@
       "path": "system.diagnostics.tools/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4158,7 +4156,6 @@
       "path": "system.linq.expressions/4.1.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4242,7 +4239,6 @@
       "path": "system.objectmodel/4.0.12",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4393,7 +4389,6 @@
       "path": "system.reflection.emit/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4425,7 +4420,6 @@
       "path": "system.reflection.emit.ilgeneration/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net45/_._",
@@ -4458,7 +4452,6 @@
       "path": "system.reflection.emit.lightweight/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net45/_._",
@@ -5681,7 +5674,6 @@
       "path": "system.xml.xdocument/4.0.11",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5879,23 +5871,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Markos\\.nuget\\packages\\": {},
+    "C:\\Users\\Melissa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS projects\\proiect_ii\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Melissa\\Source\\Repos\\proiect_ii\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
       "projectName": "proiect_ii.Tests",
-      "projectPath": "D:\\VS projects\\proiect_ii\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
-      "packagesPath": "C:\\Users\\Markos\\.nuget\\packages\\",
-      "outputPath": "D:\\VS projects\\proiect_ii\\proiect_ii.Tests\\obj\\",
+      "projectPath": "C:\\Users\\Melissa\\Source\\Repos\\proiect_ii\\proiect_ii.Tests\\proiect_ii.Tests.csproj",
+      "packagesPath": "C:\\Users\\Melissa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Melissa\\Source\\Repos\\proiect_ii\\proiect_ii.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Markos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Melissa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5910,8 +5902,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "D:\\VS projects\\proiect_ii\\proiect_ii\\proiect_ii.csproj": {
-              "projectPath": "D:\\VS projects\\proiect_ii\\proiect_ii\\proiect_ii.csproj"
+            "C:\\Users\\Melissa\\Source\\Repos\\proiect_ii\\proiect_ii\\proiect_ii.csproj": {
+              "projectPath": "C:\\Users\\Melissa\\Source\\Repos\\proiect_ii\\proiect_ii\\proiect_ii.csproj"
             }
           }
         }
